@@ -1,0 +1,20 @@
+{
+  "name": "anna-otto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:cms\" \"npm run dev:website\"",
+    "dev:cms": "cd apps/cms && npm run dev",
+    "dev:website": "cd apps/website && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
