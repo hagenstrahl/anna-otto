@@ -1,17 +1,21 @@
 /// <reference types="vite/client" />
 
 import { defineConfig, WorkspaceOptions } from "sanity";
-import { RobotIcon, RocketIcon } from "@sanity/icons";
 import { structureTool } from "sanity/structure";
-import { visionTool } from "@sanity/vision";
-import schemaTypes from "./schemas/schema";
-import deskStructure from "./deskStructure";
 
-const commonWorkspace: Pick<
-  WorkspaceOptions,
-  "projectId" | "plugins" | "tools" | "schema" | "document"
-> = {
+import { RobotIcon, RocketIcon } from "@sanity/icons";
+import { visionTool } from "@sanity/vision";
+
+import deskStructure from "./deskStructure";
+import schemaTypes from "./schemas/schema";
+
+const commonWorkspace: WorkspaceOptions = {
   projectId: "ksdn393e",
+  name: "anna-otto",
+  basePath: "/",
+  title: "Anna & Otto",
+  subtitle: "CMS",
+  dataset: process.env.SANITY_STUDIO_API_DATASET ?? "development",
   plugins: [
     structureTool({
       structure: deskStructure,
@@ -71,7 +75,8 @@ const developmentWorkspace: WorkspaceOptions = {
   icon: RocketIcon,
 };
 
-export default defineConfig([
-  productionWorkspace,
-  ...(import.meta.env.DEV ? [developmentWorkspace] : []),
-]);
+export default defineConfig(
+  import.meta.env.DEV
+    ? [developmentWorkspace, productionWorkspace]
+    : [commonWorkspace]
+);
