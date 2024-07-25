@@ -1,5 +1,5 @@
 {
-  "name": "annaotto",
+  "name": "annaotto-cms",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -10,7 +10,8 @@
     "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build public -y",
-    "publish": "sanity deploy"
+    "publish": "sanity deploy",
+    "typegen": "sanity schema extract && sanity typegen generate"
   },
   "keywords": [
     "sanity"

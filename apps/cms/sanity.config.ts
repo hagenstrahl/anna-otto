@@ -20,7 +20,7 @@ const commonWorkspace: Pick<
   ],
   tools: (prev) => {
     // 👇 Uses environment variables set by Vite in development mode
-    if (import.meta.env.DEV) {
+    if (import.meta.env?.DEV) {
       return prev;
     }
     return prev.filter((tool) => tool.name !== "vision");
@@ -73,5 +73,5 @@ const developmentWorkspace: WorkspaceOptions = {
 
 export default defineConfig([
   productionWorkspace,
-  ...(import.meta.env.DEV ? [developmentWorkspace] : []),
+  ...(import.meta.env?.DEV ? [developmentWorkspace] : []),
 ]);
