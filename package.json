@@ -4,12 +4,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev:cms\" \"npm run dev:website\"",
-    "cd:cms": "cd apps/cms",
-    "dev:cms": "npm run cd:cms && npm run dev",
-    "build:cms": "npm run cd:cms && npm run build",
-    "cd:website": "cd apps/website",
-    "dev:website": "npm run cd:website && npm run dev",
-    "build:website": "npm run cd:website && npm run build"
+    "dev:cms": "cd apps/cms && npm run dev",
+    "build:cms": "cd apps/cms && npm run build",
+    "dev:website": "cd apps/website && npm run dev",
+    "build:website": "cd apps/website && npm run build"
   },
   "keywords": [],
   "author": "",
