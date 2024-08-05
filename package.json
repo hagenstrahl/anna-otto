@@ -7,7 +7,9 @@
     "dev:cms": "cd apps/cms && npm run dev",
     "build:cms": "cd apps/cms && npm run build",
     "dev:website": "cd apps/website && npm run dev",
-    "build:website": "cd apps/website && npm run build"
+    "build:website": "cd apps/website && npm run build",
+    "test:ci": "npm run test:ci --workspace=annaotto-website",
+    "lint": "npm run lint --workspaces"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +23,6 @@
   },
   "dependencies": {
     "sanity": "^3.52.2"
-  }
+  },
+  "packageManager": "npm@10.7.0"
 }
