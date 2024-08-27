@@ -12,6 +12,9 @@ module.exports = {
         grau: "#7d7d82",
       },
     },
+    /*    dropShadow: {
+      custom: ["2px_-2px_4px_rgba(0,0,0,0.25)", "0_1px_2px_rgba(0,0,0,0.44)"],
+    },*/
     fontFamily: {
       heading: ["eldwin-script"],
       text: ["soleil"],
