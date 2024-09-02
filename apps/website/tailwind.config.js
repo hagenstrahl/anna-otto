@@ -10,6 +10,8 @@ module.exports = {
         orange: "#f9c0a3",
         "dark-orange": "#f69f73",
         grau: "#7d7d82",
+        blau: "#adddef",
+        gruen: "#d4e29e",
       },
     },
     /*    dropShadow: {
