@@ -1,4 +1,6 @@
+import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
+import Button from "../components/button";
 
 const Home = (): JSX.Element => {
   return (
@@ -40,29 +42,27 @@ const Home = (): JSX.Element => {
           alt="Haufen von Kaffeebohnen"
           width={386}
           height={386}
-          className="relative bottom-6 -right-28"
+          className="relative -z-10 bottom-6 -right-36"
         />
       </div>
-      {/*
-        <h2 className="absolute z-20 bottom-20 text-lg font-text text-grau bg-[rgba(255,255,255,0.75)]">
+      <div className="flex justify-center space-x-4 -mt-44">
+        <a href="tel:+4939812293575" className="flex">
+          <Button icon={Phone}>Anrufen</Button>
+        </a>
+        <a
+          href="https://www.google.de/maps/dir//Markt+15,+17235+Neustrelitz"
+          target="_blank"
+          rel="noreferrer"
+          className="flex"
+        >
+          <Button icon={Map}>Route anzeigen</Button>
+        </a>
+      </div>
+      <div className="flex justify-center mt-6">
+        <h2 className="text-lg font-text text-grau">
           Mo,Mi-Fr 12:00-17:30 Sa,So 08:00-17:30
         </h2>
       </div>
-      <div className="flex items-center justify-center space-x-4 bottom-28">
-        <button
-          type="button"
-          className="px-5 text-white rounded-3xl hover:bg-gruen bg-blau font-text min-h-[48px]"
-        >
-          Anrufen
-        </button>
-        <button
-          type="button"
-          className="px-5 text-white rounded-3xl hover:bg-gruen bg-blau font-text min-h-[48px]"
-        >
-          Route anzeigen
-        </button>
-      </div>
-      */}
     </>
   );
 };
@@ -70,3 +70,4 @@ export default Home;
 //2px_-2px_4px_rgba(0,0,0,0.25)
 //0_1px_2px_rgba(0,0,0,0.44)
 //drop-shadow-[5px_-5px_5px_rgb(255,255,255)]
+//className="flex px-5 text-white rounded-3xl hover:bg-gruen bg-blau font-text min-h-[48px]"
