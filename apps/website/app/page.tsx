@@ -1,10 +1,11 @@
 import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
 import Button from "../components/button";
+import Heading, { HeadingType } from "../components/heading";
 
 const Home = (): JSX.Element => {
   return (
-    <>
+    <div className="w-full max-w-full overflow-x-hidden">
       <div className="relative flex justify-between">
         <div className="relative w-[70%] max-w-[322px]">
           <Image
@@ -21,7 +22,7 @@ const Home = (): JSX.Element => {
             alt="Einzelne Blaubeeren"
             width={158}
             height={213}
-            className="relative top-6 right-3 -rotate-[295deg] drop-shadow-[2px_-2px_4px_rgba(0,0,0,0.25)]"
+            className="relative top-6 right-6 -rotate-[295deg] drop-shadow-[2px_-2px_4px_rgba(0,0,0,0.25)]"
             //      className="absolute top-6 right-3 -rotate-[295deg] drop-shadow-custom" still testing
           />
         </div>
@@ -42,7 +43,8 @@ const Home = (): JSX.Element => {
           alt="Haufen von Kaffeebohnen"
           width={386}
           height={386}
-          className="relative -z-10 bottom-6 -right-36"
+          style={{ objectPosition: "144px 0px" }}
+          className="relative -z-10 bottom-6"
         />
       </div>
       <div className="flex justify-center space-x-4 -mt-44">
@@ -59,15 +61,84 @@ const Home = (): JSX.Element => {
         </a>
       </div>
       <div className="flex justify-center mt-6">
-        <h2 className="text-lg font-text text-grau">
+        <p className="text-lg font-text text-grau">
           Mo,Mi-Fr 12:00-17:30 Sa,So 08:00-17:30
-        </h2>
+        </p>
       </div>
-    </>
+      <div className="flex justify-center mt-20 mb-12">
+        <Image
+          src="/svg/flowers.svg"
+          alt="Bunte Blumen"
+          width={195}
+          height={81}
+        />
+      </div>
+      <div className="flex justify-center p-6 rounded-3xl w-80">
+        <section>
+          <Heading type={HeadingType.H2} className="mt-4">
+            Das Cafe
+          </Heading>
+          <p className="mt-4 mb-4 text-sm text-left font-text text-grau">
+            Duftender,selbst gebackener Kuchen oder ausgiebiges Faxen machen -
+            genau das lässt unser Familiencafe zum Wohlfühlort werden.
+          </p>
+          <Button>Coming Soon!</Button>
+        </section>
+      </div>
+      <div className="flex justify-center mt-64">
+        <div className="relative w-[900px] h-[600px]">
+          <Image
+            src="/images/two-girls-eating-cake.png"
+            alt="Zwei Mädchen essen Kuchen"
+            width={900}
+            height={600}
+            className="relative max-w-none -left-[22%] z-10"
+          />
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <div>
+          <Image
+            src="/svg/birch-left.svg"
+            alt="Birkenstamm"
+            width={121}
+            height={473}
+            className="relative -top-56 -left-12"
+          />
+        </div>
+        <div>
+          <Image
+            src="/svg/twig.svg"
+            alt="Ast mit grünen Blätter"
+            width={94}
+            height={69}
+            className="relative right-24 top-6"
+          />
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <div className="relative w-[561px] h-[600px]">
+          <Image
+            src="/images/chairs-between-birches.png"
+            alt="Stühle zwischen Birken Baumstämme"
+            width={561}
+            height={600}
+            className="relative max-w-none"
+          />
+        </div>
+      </div>
+      <div className="flex justify-center mt-64">
+        <div className="relative w-[414] h-[600]">
+          <Image
+            src="/images/mother-with-baby.png"
+            alt="Mutter mit Baby"
+            width={414}
+            height={600}
+            className="relative max-w-none"
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 export default Home;
-//2px_-2px_4px_rgba(0,0,0,0.25)
-//0_1px_2px_rgba(0,0,0,0.44)
-//drop-shadow-[5px_-5px_5px_rgb(255,255,255)]
-//className="flex px-5 text-white rounded-3xl hover:bg-gruen bg-blau font-text min-h-[48px]"
