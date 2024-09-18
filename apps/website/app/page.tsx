@@ -123,18 +123,38 @@ const Home = (): JSX.Element => {
             alt="Stühle zwischen Birken Baumstämme"
             width={561}
             height={600}
-            className="relative max-w-none"
+            className="relative -top-56 max-w-none"
           />
         </div>
       </div>
-      <div className="flex justify-center mt-64">
+      <div className="flex justify-between">
+        <div>
+          <Image
+            src="/images/rattle-toy.png"
+            alt="Holz Rassel"
+            width={168}
+            height={281}
+            className="relative rotate-[58deg]"
+          />
+        </div>
+        <div>
+          <Image
+            src="/svg/birch-left.svg"
+            alt="Birkenstamm"
+            width={121}
+            height={473}
+            className="relative -top-56"
+          />
+        </div>
+      </div>
+      <div className="flex justify-center">
         <div className="relative w-[414] h-[600]">
           <Image
             src="/images/mother-with-baby.png"
             alt="Mutter mit Baby"
             width={414}
             height={600}
-            className="relative max-w-none"
+            className="relative -top-56 max-w-none"
           />
         </div>
       </div>
