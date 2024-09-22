@@ -20,3 +20,18 @@ const Button = ({
 };
 
 export default Button;
+
+const OutlineButton = ({
+  children,
+  className = "",
+}: ButtonProps): JSX.Element => {
+  return (
+    <button
+      className={`px-5 text-blau border border-blau rounded-3xl hover:text-gruen hover:border-gruen bg-white font-text min-h-12 flex items-center ${className}`}
+    >
+      <span>{children}</span>
+    </button>
+  );
+};
+
+export { OutlineButton };

@@ -1,6 +1,6 @@
 import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
-import Button from "../components/button";
+import Button, { OutlineButton } from "../components/button";
 import Heading, { HeadingType } from "../components/heading";
 
 const Home = (): JSX.Element => {
@@ -73,26 +73,27 @@ const Home = (): JSX.Element => {
           height={81}
         />
       </div>
-      <div className="flex justify-center p-6 rounded-3xl w-80">
+
+      <div className="flex justify-center p-6 ml-8 bg-white rounded-xl w-80">
         <section>
-          <Heading type={HeadingType.H2} className="mt-4">
-            Das Cafe
+          <Heading type={HeadingType.H2} className="mt-4 text-5xl text-left">
+            Das Café
           </Heading>
-          <p className="mt-4 mb-4 text-sm text-left font-text text-grau">
-            Duftender,selbst gebackener Kuchen oder ausgiebiges Faxen machen -
-            genau das lässt unser Familiencafe zum Wohlfühlort werden.
+          <p className="mt-4 mb-4 text-lg text-left font-text text-grau">
+            Duftender, selbst gebackener Kuchen oder ausgiebiges Faxen machen -
+            genau das lässt unser Familiencafé zum Wohlfühlort werden.
           </p>
-          <Button>Coming Soon!</Button>
+          <OutlineButton>Coming Soon!</OutlineButton>
         </section>
       </div>
-      <div className="flex justify-center mt-64">
+      <div className="flex justify-center -mt-56">
         <div className="relative w-[900px] h-[600px]">
           <Image
             src="/images/two-girls-eating-cake.png"
             alt="Zwei Mädchen essen Kuchen"
             width={900}
             height={600}
-            className="relative max-w-none -left-[22%] z-10"
+            className="relative max-w-none -left-[22%] -z-10"
           />
         </div>
       </div>
@@ -103,7 +104,7 @@ const Home = (): JSX.Element => {
             alt="Birkenstamm"
             width={121}
             height={473}
-            className="relative -top-56 -left-12"
+            className="relative -top-56 -left-12 -z-20"
           />
         </div>
         <div>
@@ -116,25 +117,42 @@ const Home = (): JSX.Element => {
           />
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="relative w-[561px] h-[600px]">
-          <Image
-            src="/images/chairs-between-birches.png"
-            alt="Stühle zwischen Birken Baumstämme"
-            width={561}
-            height={600}
-            className="relative -top-56 max-w-none"
-          />
+      <div className="relative -mt-96">
+        <div className="flex justify-center p-6 ml-auto mr-10 bg-white rounded-xl w-80">
+          <section>
+            <Heading type={HeadingType.H2} className="mt-4 text-5xl text-right">
+              Der Shop
+            </Heading>
+            <p className="mt-4 mb-4 text-lg text-right font-text text-grau">
+              Holzspielzeug, Tragetuch oder Kuscheltier - hier gibt es immer
+              etwas Neues zu entdecken.
+            </p>
+            <div className="flex justify-end">
+              <OutlineButton>Coming Soon!</OutlineButton>
+            </div>
+          </section>
+        </div>
+        <div className="relative justify-center">
+          <div className="relative w-[561px] h-[600px]">
+            <Image
+              src="/images/chairs-between-birches.png"
+              alt="Stühle zwischen Birken Baumstämme"
+              width={561}
+              height={600}
+              className="relative -top-32 max-w-none -z-10"
+            />
+          </div>
         </div>
       </div>
-      <div className="flex justify-between">
+
+      <div className="flex justify-between -mt-40">
         <div>
           <Image
             src="/images/rattle-toy.png"
             alt="Holz Rassel"
             width={168}
             height={281}
-            className="relative rotate-[58deg]"
+            className="relative rotate-[58deg] -left-7"
           />
         </div>
         <div>
@@ -143,19 +161,33 @@ const Home = (): JSX.Element => {
             alt="Birkenstamm"
             width={121}
             height={473}
-            className="relative -top-56"
+            className="relative -left-7 -top-56 -z-20"
           />
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="relative w-[414] h-[600]">
-          <Image
-            src="/images/mother-with-baby.png"
-            alt="Mutter mit Baby"
-            width={414}
-            height={600}
-            className="relative -top-56 max-w-none"
-          />
+      <div className="relative -mt-72">
+        <div className="flex justify-center p-6 ml-8 bg-white rounded-xl w-80">
+          <section>
+            <Heading type={HeadingType.H2} className="mt-4 text-5xl text-left">
+              Beratungen & Kurse
+            </Heading>
+            <p className="mt-4 mb-4 text-lg text-left font-text text-grau">
+              Das neue Glück bring viele Veränderungen mit sich. Lasst euch in
+              unseren verschiedenen Kursen beraten.
+            </p>
+            <OutlineButton>Coming Soon!</OutlineButton>
+          </section>
+        </div>
+        <div className="flex justify-center">
+          <div className="relative">
+            <Image
+              src="/images/mother-and-baby.png"
+              alt="Mutter und Baby"
+              width={828}
+              height={1200}
+              className="relative -top-52 max-w-none -z-10"
+            />
+          </div>
         </div>
       </div>
     </div>
