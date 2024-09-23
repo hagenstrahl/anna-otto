@@ -1,9 +1,9 @@
 import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
-import Button, { OutlineButton } from "../components/button";
-import Heading, { HeadingType } from "../components/heading";
+import Button from "../components/button";
+import ContentSection from "../components/content-section";
 
-const Home = (): JSX.Element => {
+const Home = () => {
   return (
     <div className="w-full max-w-full overflow-x-hidden">
       <div className="relative flex justify-between">
@@ -74,17 +74,13 @@ const Home = (): JSX.Element => {
         />
       </div>
 
-      <div className="flex justify-center p-6 ml-8 bg-white rounded-xl w-80">
-        <section>
-          <Heading type={HeadingType.H2} className="mt-4 text-5xl text-left">
-            Das Café
-          </Heading>
-          <p className="mt-4 mb-4 text-lg text-left font-text text-grau">
-            Duftender, selbst gebackener Kuchen oder ausgiebiges Faxen machen -
-            genau das lässt unser Familiencafé zum Wohlfühlort werden.
-          </p>
-          <OutlineButton>Coming Soon!</OutlineButton>
-        </section>
+      <div>
+        <ContentSection
+          title="Das Café"
+          content="Duftender, selbst gebackener Kuchen oder ausgiebiges Faxen machen - genau das lässt unser Familiencafé zum Wohlfühlort werden."
+          buttonText="Coming Soon!"
+          alignment="left"
+        />
       </div>
       <div className="flex justify-center -mt-56">
         <div className="relative w-[900px] h-[600px]">
@@ -118,19 +114,13 @@ const Home = (): JSX.Element => {
         </div>
       </div>
       <div className="relative -mt-96">
-        <div className="flex justify-center p-6 ml-auto mr-10 bg-white rounded-xl w-80">
-          <section>
-            <Heading type={HeadingType.H2} className="mt-4 text-5xl text-right">
-              Der Shop
-            </Heading>
-            <p className="mt-4 mb-4 text-lg text-right font-text text-grau">
-              Holzspielzeug, Tragetuch oder Kuscheltier - hier gibt es immer
-              etwas Neues zu entdecken.
-            </p>
-            <div className="flex justify-end">
-              <OutlineButton>Coming Soon!</OutlineButton>
-            </div>
-          </section>
+        <div>
+          <ContentSection
+            title=" Der Shop"
+            content="Holzspielzeug, Tragetuch oder Kuscheltier - hier gibt es immer etwas Neues zu entdecken."
+            buttonText="Coming Soon!"
+            alignment="right"
+          />
         </div>
         <div className="relative justify-center">
           <div className="relative w-[561px] h-[600px]">
@@ -166,17 +156,13 @@ const Home = (): JSX.Element => {
         </div>
       </div>
       <div className="relative -mt-72">
-        <div className="flex justify-center p-6 ml-8 bg-white rounded-xl w-80">
-          <section>
-            <Heading type={HeadingType.H2} className="mt-4 text-5xl text-left">
-              Beratungen & Kurse
-            </Heading>
-            <p className="mt-4 mb-4 text-lg text-left font-text text-grau">
-              Das neue Glück bring viele Veränderungen mit sich. Lasst euch in
-              unseren verschiedenen Kursen beraten.
-            </p>
-            <OutlineButton>Coming Soon!</OutlineButton>
-          </section>
+        <div>
+          <ContentSection
+            title="Beratungen & Kurse"
+            content="Das neue Glück bringt viele Veränderungen mit sich. Lasst euch in unseren verschiedenen Kursen beraten."
+            buttonText="Coming Soon!"
+            alignment="right"
+          />
         </div>
         <div className="flex justify-center">
           <div className="relative">
