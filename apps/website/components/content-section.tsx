@@ -1,4 +1,4 @@
-import { OutlineButton } from "./button";
+import Button from "./button";
 import Heading, { HeadingType } from "./heading";
 
 const ContentSection: React.FC<{
@@ -21,7 +21,7 @@ const ContentSection: React.FC<{
         {content}
       </p>
       <div className={alignment === "right" ? "flex justify-end" : ""}>
-        <OutlineButton>{buttonText}</OutlineButton>
+        <Button type="secondary">{buttonText}</Button>
       </div>
     </div>
   </section>

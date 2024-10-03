@@ -48,7 +48,9 @@ const Home = () => {
       </div>
       <div className="flex justify-center space-x-4 -mt-44">
         <a href="tel:+4939812293575" className="flex">
-          <Button icon={Phone}>Anrufen</Button>
+          <Button type="primary" icon={Phone}>
+            Anrufen
+          </Button>
         </a>
         <a
           href="https://www.google.de/maps/dir//Markt+15,+17235+Neustrelitz"
@@ -56,7 +58,9 @@ const Home = () => {
           rel="noreferrer"
           className="flex"
         >
-          <Button icon={Map}>Route anzeigen</Button>
+          <Button type="primary" icon={Map}>
+            Route anzeigen
+          </Button>
         </a>
       </div>
       <div className="flex justify-center mt-6">

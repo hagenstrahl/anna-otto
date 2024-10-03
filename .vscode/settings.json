@@ -1,1 +1,10 @@
-{ "editor.codeActionsOnSave": { "source.organizeImports": "always" } }
+{
+  "editor.codeActionsOnSave": { "source.organizeImports": "always" },
+  "tailwindCSS.classAttributes": [
+    "className",
+    ".*Styles",
+    ".*Classes",
+    ".*Class",
+    ".*Style"
+  ]
+}
