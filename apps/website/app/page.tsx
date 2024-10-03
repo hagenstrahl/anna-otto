@@ -31,8 +31,8 @@ const Home = () => {
         <Image
           src="/fao-web-assets-logo-vertical-colour.svg"
           alt="Anna und Otto - Das Familiencafe Logo"
-          width={269}
-          height={275}
+          width={650}
+          height={975}
           className="px-6"
         />
       </div>
@@ -164,12 +164,13 @@ const Home = () => {
           />
         </div>
         <div className="flex justify-center">
-          <div className="relative">
+          <div className="relative h-[600px] overflow-hidden">
             <Image
               src="/images/mother-and-baby.png"
               alt="Mutter und Baby"
-              width={414}
-              height={600}
+              width={650}
+              height={975}
+              style={{ objectPosition: "-32px -195px" }}
               className="relative -top-24 max-w-none -z-10"
             />
           </div>
