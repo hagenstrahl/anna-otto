@@ -23,7 +23,6 @@ const Home = () => {
             width={158}
             height={213}
             className="relative top-6 right-6 -rotate-[295deg] drop-shadow-[2px_-2px_4px_rgba(0,0,0,0.25)]"
-            //      className="absolute top-6 right-3 -rotate-[295deg] drop-shadow-custom" still testing
           />
         </div>
       </div>
@@ -147,15 +146,15 @@ const Home = () => {
         </div>
         <div>
           <Image
-            src="/svg/birch-left.svg"
+            src="/svg/birch-right.svg"
             alt="Birkenstamm"
             width={121}
             height={473}
-            className="relative -left-7 -top-56 -z-20"
+            className="relative -left-7 -top-8 -z-20"
           />
         </div>
       </div>
-      <div className="relative -mt-72">
+      <div className="relative -mt-44">
         <div>
           <ContentSection
             title="Beratungen & Kurse"
@@ -169,9 +168,9 @@ const Home = () => {
             <Image
               src="/images/mother-and-baby.png"
               alt="Mutter und Baby"
-              width={828}
-              height={1200}
-              className="relative -top-52 max-w-none -z-10"
+              width={414}
+              height={600}
+              className="relative -top-24 max-w-none -z-10"
             />
           </div>
         </div>

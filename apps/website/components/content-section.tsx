@@ -13,7 +13,7 @@ const ContentSection: React.FC<{
     <div>
       <Heading
         type={HeadingType.H2}
-        className={`mt-4 text-5xl text-${alignment}`}
+        className={`mt-4 text-5xl ${alignment === "left" ? "text-left" : "text-right"}`}
       >
         {title}
       </Heading>
