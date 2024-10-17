@@ -1,12 +1,20 @@
+import React from "react";
 import Button from "./button";
 import Heading, { HeadingType } from "./heading";
 
-const ContentSection: React.FC<{
+interface FeatureSectionProps {
   title: string;
   content: string;
   buttonText: string;
   alignment: "left" | "right";
-}> = ({ title, content, buttonText, alignment }) => (
+}
+
+const FeatureSection: React.FC<FeatureSectionProps> = ({
+  title,
+  content,
+  buttonText,
+  alignment,
+}) => (
   <section
     className={`flex justify-center p-6 ml-8 bg-white rounded-xl w-80 ${alignment === "right" ? "ml-auto mr-10" : ""}`}
   >
@@ -27,4 +35,4 @@ const ContentSection: React.FC<{
   </section>
 );
 
-export default ContentSection;
+export default FeatureSection;

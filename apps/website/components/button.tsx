@@ -1,4 +1,4 @@
-interface ButtonProps {
+export interface ButtonProps {
   children: string;
   className?: string;
   icon?: React.ElementType;
@@ -21,8 +21,16 @@ const Button = ({
   return (
     <button
       className={`px-5 rounded-3xl font-text min-h-12 flex items-center ${typeClasses} ${className}`}
+      data-testid="button"
     >
-      {Icon && <Icon height={24} width={24} className="mr-2" />}
+      {Icon && (
+        <Icon
+          height={24}
+          width={24}
+          className="mr-2"
+          data-testid="button-icon"
+        />
+      )}
       <span>{children}</span>
     </button>
   );

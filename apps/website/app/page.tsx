@@ -1,7 +1,7 @@
 import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
 import Button from "../components/button";
-import ContentSection from "../components/content-section";
+import FeatureSection from "../components/feature-section";
 
 const Home = () => {
   return (
@@ -78,7 +78,7 @@ const Home = () => {
       </div>
 
       <div>
-        <ContentSection
+        <FeatureSection
           title="Das Café"
           content="Duftender, selbst gebackener Kuchen oder ausgiebiges Faxen machen - genau das lässt unser Familiencafé zum Wohlfühlort werden."
           buttonText="Coming Soon!"
@@ -118,7 +118,7 @@ const Home = () => {
       </div>
       <div className="relative -mt-96">
         <div>
-          <ContentSection
+          <FeatureSection
             title=" Der Shop"
             content="Holzspielzeug, Tragetuch oder Kuscheltier - hier gibt es immer etwas Neues zu entdecken."
             buttonText="Coming Soon!"
@@ -160,7 +160,7 @@ const Home = () => {
       </div>
       <div className="relative -mt-44">
         <div>
-          <ContentSection
+          <FeatureSection
             title="Beratungen & Kurse"
             content="Das neue Glück bringt viele Veränderungen mit sich. Lasst euch in unseren verschiedenen Kursen beraten."
             buttonText="Coming Soon!"
