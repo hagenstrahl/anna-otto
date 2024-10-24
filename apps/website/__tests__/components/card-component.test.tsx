@@ -1,6 +1,6 @@
 import { cleanup, render } from "@testing-library/react";
 import React from "react";
-import FeatureSection from "../../components/feature-section";
+import CardComponent from "../../components/card-component";
 
 jest.mock("../../components/button", () => {
   return function MockButton({ children }: { children: React.ReactNode }) {
@@ -30,14 +30,14 @@ jest.mock("../../components/heading", () => {
   };
 });
 
-type FeatureSectionTestContext = {
+type CardComponentTestContext = {
   section: HTMLElement;
   heading: HTMLElement;
   content: HTMLElement;
   button: HTMLElement;
 };
 
-describe("FeatureSection", () => {
+describe("CardComponent", () => {
   afterEach(cleanup);
 
   const createComponent = (
@@ -47,9 +47,9 @@ describe("FeatureSection", () => {
       buttonText: "Click Me",
       alignment: "left" as "left" | "right",
     }
-  ): FeatureSectionTestContext => {
+  ): CardComponentTestContext => {
     const { getByTestId } = render(
-      <FeatureSection
+      <CardComponent
         title={props.title}
         content={props.content}
         buttonText={props.buttonText}

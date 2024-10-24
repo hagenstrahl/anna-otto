@@ -1,7 +1,7 @@
 import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
 import Button from "../components/button";
-import FeatureSection from "../components/feature-section";
+import FeatureSection from "../components/card-component";
 
 const Home = () => {
   return (

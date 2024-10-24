@@ -1,19 +1,19 @@
-import Button from "../components/button";
-import Heading, { HeadingType } from "../components/heading";
+import Button from "./button";
+import Heading, { HeadingType } from "./heading";
 
-interface FeatureSectionProps {
+interface CardComponentProps {
   title: string;
   content: string;
   buttonText: string;
   alignment: "left" | "right";
 }
 
-const FeatureSection = ({
+const CardComponent = ({
   title,
   content,
   buttonText,
   alignment,
-}: FeatureSectionProps) => (
+}: CardComponentProps) => (
   <section
     data-testid="feature-section"
     className={`flex justify-center p-6 ml-8 bg-white rounded-xl w-80 ${
@@ -44,4 +44,4 @@ const FeatureSection = ({
   </section>
 );
 
-export default FeatureSection;
+export default CardComponent;
