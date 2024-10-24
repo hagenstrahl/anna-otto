@@ -167,14 +167,14 @@ const Home = () => {
             alignment="left"
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center -mt-44">
           <div className="relative h-[600px] overflow-hidden">
             <Image
               src="/images/mother-and-baby.png"
               alt="Mutter und Baby"
               width={650}
               height={975}
-              style={{ objectPosition: "-32px -195px" }}
+              style={{ objectPosition: "-32px -130px" }}
               className="relative -top-24 max-w-none -z-10"
             />
           </div>
