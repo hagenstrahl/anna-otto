@@ -1,6 +1,5 @@
-import React from "react";
-import Button from "./button";
-import Heading, { HeadingType } from "./heading";
+import Button from "../components/button";
+import Heading, { HeadingType } from "../components/heading";
 
 interface FeatureSectionProps {
   title: string;
@@ -9,23 +8,33 @@ interface FeatureSectionProps {
   alignment: "left" | "right";
 }
 
-const FeatureSection: React.FC<FeatureSectionProps> = ({
+const FeatureSection = ({
   title,
   content,
   buttonText,
   alignment,
-}) => (
+}: FeatureSectionProps) => (
   <section
-    className={`flex justify-center p-6 ml-8 bg-white rounded-xl w-80 ${alignment === "right" ? "ml-auto mr-10" : ""}`}
+    data-testid="feature-section"
+    className={`flex justify-center p-6 ml-8 bg-white rounded-xl w-80 ${
+      alignment === "right" ? "ml-auto mr-10" : ""
+    }`}
   >
     <div>
       <Heading
         type={HeadingType.H2}
-        className={`mt-4 text-5xl ${alignment === "left" ? "text-left" : "text-right"}`}
+        className={`mt-4 text-5xl ${
+          alignment === "left" ? "text-left" : "text-right"
+        }`}
       >
         {title}
       </Heading>
-      <p className={`mt-4 mb-4 text-lg text-${alignment} font-text text-grau`}>
+      <p
+        data-testid="content"
+        className={`mt-4 mb-4 text-lg font-text text-grau ${
+          alignment === "left" ? "text-left" : "text-right"
+        }`}
+      >
         {content}
       </p>
       <div className={alignment === "right" ? "flex justify-end" : ""}>

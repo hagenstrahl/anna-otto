@@ -164,7 +164,7 @@ const Home = () => {
             title="Beratungen & Kurse"
             content="Das neue Glück bringt viele Veränderungen mit sich. Lasst euch in unseren verschiedenen Kursen beraten."
             buttonText="Coming Soon!"
-            alignment="right"
+            alignment="left"
           />
         </div>
         <div className="flex justify-center">
