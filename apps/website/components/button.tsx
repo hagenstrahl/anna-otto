@@ -5,15 +5,14 @@ export interface ButtonProps
   children: string;
   className?: string;
   icon?: React.ElementType;
-  variant: "primary" | "secondary"; // Renamed from "type" to "variant"
+  variant: "primary" | "secondary";
 }
 
 const Button = ({
   children,
   className = "",
   icon: Icon,
-  variant, // Use "variant" here instead of "type"
-  ...props
+  variant,
 }: ButtonProps): JSX.Element => {
   let typeClasses = "";
   if (variant === "primary") {
@@ -26,7 +25,7 @@ const Button = ({
   return (
     <button
       className={`px-5 rounded-3xl font-text min-h-12 flex items-center ${typeClasses} ${className}`}
-      {...props} // Spread props here
+      data-testid="button"
     >
       {Icon && (
         <Icon

@@ -1,6 +1,6 @@
-import ExternalLink from "../../components/external-link";
-import Heading, { HeadingType } from "../../components/heading";
 import { Metadata } from "next";
+import ExternalLink from "../../components/external-link";
+import Heading, { HeadingVariant } from "../../components/heading";
 import { getMetadata } from "../../libs/metadata";
 
 export const metadata: Metadata = getMetadata({
@@ -9,11 +9,11 @@ export const metadata: Metadata = getMetadata({
 
 const Datenschutz = (): JSX.Element => (
   <>
-    <Heading type={HeadingType.H1} className="mt-8">
+    <Heading variant={HeadingVariant.H1} className="mt-8">
       Datenschutz
     </Heading>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H2}>Allgemeine Hinweise</Heading>
+      <Heading variant={HeadingVariant.H2}>Allgemeine Hinweise</Heading>
       <p>
         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit
         Ihren personenbezogenen Daten passiert, wenn Sie unsere Website
@@ -24,7 +24,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Datenerfassung auf unserer Website
       </Heading>
       <p>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</p>
@@ -35,7 +35,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Wie erfassen wir Ihre Daten?
       </Heading>
       <p>
@@ -52,7 +52,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Wofür nutzen wir Ihre Daten?
       </Heading>
       <p>
@@ -62,7 +62,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Welche Rechte haben Sie bezüglich Ihrer Daten?
       </Heading>
       <p>
@@ -76,10 +76,10 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H2} className="mt-4">
+      <Heading variant={HeadingVariant.H2} className="mt-4">
         Allgemeine Hinweise und Pflichtinformationen
       </Heading>
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Datenschutz
       </Heading>
       <p>
@@ -103,7 +103,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Hinweis zur verantwortlichen Stelle
       </Heading>
       <p>
@@ -132,7 +132,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Widerruf Ihrer Einwilligung zur Datenverarbeitung
       </Heading>
       <p>
@@ -144,7 +144,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Kinder und Jugendliche
       </Heading>
       <p>
@@ -155,7 +155,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Beschwerderecht bei der zuständigen Aufsichtsbehörde
       </Heading>
       <p>
@@ -174,7 +174,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Recht auf Datenübertragbarkeit
       </Heading>
       <p>
@@ -187,7 +187,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         SSL- bzw. TLS-Verschlüsselung
       </Heading>
       <p>
@@ -204,7 +204,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Auskunft, Sperrung, Löschung
       </Heading>
       <p>
@@ -218,7 +218,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Widerspruch gegen Werbe-Mails
       </Heading>
       <p>
@@ -231,10 +231,10 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H2} className="mt-4">
+      <Heading variant={HeadingVariant.H2} className="mt-4">
         Datenerfassung auf unserer Webseite
       </Heading>
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Cookies
       </Heading>
       <p>
@@ -272,7 +272,7 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Server-Log-Dateien
       </Heading>
       <p>
@@ -301,10 +301,10 @@ const Datenschutz = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H2} className="mt-4">
+      <Heading variant={HeadingVariant.H2} className="mt-4">
         Plugins und Tools
       </Heading>
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Adobe Font
       </Heading>
       <p>

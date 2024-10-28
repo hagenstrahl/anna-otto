@@ -9,10 +9,14 @@ type ButtonTestContext = {
 
 describe("Button", () => {
   const createComponent = (
-    props: ButtonProps = { type: "primary", children: "test" }
+    props: ButtonProps = { variant: "primary", children: "test" }
   ): ButtonTestContext => {
     const { getByTestId } = render(
-      <Button type={props.type} icon={props.icon} className={props.className}>
+      <Button
+        variant={props.variant}
+        icon={props.icon}
+        className={props.className}
+      >
         {props.children}
       </Button>
     );
@@ -34,7 +38,7 @@ describe("Button", () => {
 
   test("should render secondary button with correct classes", () => {
     const { button } = createComponent({
-      type: "secondary",
+      variant: "secondary",
       children: "secondary",
     });
     expect(button).toHaveClass(
@@ -50,7 +54,7 @@ describe("Button", () => {
   test("should render button with correct icon", () => {
     const { buttonIcon } = createComponent({
       icon: Map,
-      type: "primary",
+      variant: "primary",
       children: "Map",
     });
     expect(buttonIcon).toBeTruthy();

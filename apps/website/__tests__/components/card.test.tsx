@@ -1,4 +1,4 @@
-import { cleanup, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import Card from "../../components/card";
 
 type CardTestContext = {
@@ -9,8 +9,6 @@ type CardTestContext = {
 };
 
 describe("Card Component", () => {
-  afterEach(cleanup);
-
   const createComponent = (
     props = {
       title: "Sample Title",
@@ -29,32 +27,30 @@ describe("Card Component", () => {
     );
     return {
       section: getByTestId("card"),
-      heading: getByTestId("card-heading"),
+      heading: getByTestId("heading"),
       content: getByTestId("card-content"),
-      button: getByTestId("card-button"),
+      button: getByTestId("button"),
     };
   };
 
-  test("should without crashing", () => {
+  test("should render without crashing", () => {
     const { section } = createComponent();
     expect(section).toBeTruthy();
   });
 
   test("should apply correct left alignment styling", () => {
-    const { section, heading, content } = createComponent();
-    expect(section).not.toHaveClass("ml-auto mr-10");
+    const { heading, content } = createComponent();
     expect(heading.className).toContain("text-left");
     expect(content.className).toContain("text-left");
   });
 
   test("should apply correct right alignment styling", () => {
-    const { section, heading, content } = createComponent({
+    const { heading, content } = createComponent({
       title: "Right Aligned Title",
       content: "Right Aligned Content",
       buttonText: "Aligned Button",
       alignment: "right",
     });
-    expect(section).toHaveClass("ml-auto mr-10");
     expect(heading.className).toContain("text-right");
     expect(content.className).toContain("text-right");
   });

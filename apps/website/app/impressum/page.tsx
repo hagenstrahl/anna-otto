@@ -1,6 +1,6 @@
-import ExternalLink from "../../components/external-link";
-import Heading, { HeadingType } from "../../components/heading";
 import { Metadata } from "next";
+import ExternalLink from "../../components/external-link";
+import Heading, { HeadingVariant } from "../../components/heading";
 import { getMetadata } from "../../libs/metadata";
 
 export const metadata: Metadata = getMetadata({
@@ -9,7 +9,7 @@ export const metadata: Metadata = getMetadata({
 
 const Impressum = (): JSX.Element => (
   <>
-    <Heading type={HeadingType.H1} className="mt-8">
+    <Heading variant={HeadingVariant.H1} className="mt-8">
       Impressum
     </Heading>
     <section className="max-w-3xl text-center">
@@ -39,7 +39,7 @@ const Impressum = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Haftungsbeschränkung
       </Heading>
       <p>
@@ -54,7 +54,7 @@ const Impressum = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Hinweis zu externen Links
       </Heading>
       <p>
@@ -71,7 +71,7 @@ const Impressum = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Urheber- und Leistungsschutzrechte
       </Heading>
       <p>
@@ -84,7 +84,7 @@ const Impressum = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Kontakt
       </Heading>
       <p>
@@ -96,7 +96,7 @@ const Impressum = (): JSX.Element => (
       </p>
     </section>
     <section className="max-w-3xl text-center">
-      <Heading type={HeadingType.H3} className="mt-4">
+      <Heading variant={HeadingVariant.H3} className="mt-4">
         Kontaktdaten ANNA & OTTO - Das Familiencafé
       </Heading>
       <p>

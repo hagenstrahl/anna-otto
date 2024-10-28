@@ -1,5 +1,5 @@
 import Button from "./button";
-import Heading, { HeadingType } from "./heading";
+import Heading, { HeadingVariant } from "./heading";
 
 interface CardProps {
   title: string;
@@ -9,37 +9,30 @@ interface CardProps {
 }
 
 const Card = ({ title, content, buttonText, alignment }: CardProps) => (
-  <section
-    data-testid="card"
-    className={`flex justify-center p-6 ml-8 bg-white rounded-xl w-80 ${
-      alignment === "right" ? "ml-auto mr-10" : ""
-    }`}
+  <div
+    className={`px-8 flex justify-${alignment === "right" ? "end" : "start"}`}
   >
-    <div>
+    <section
+      className={`flex flex-col justify-center p-6 bg-white rounded-xl w-80`}
+      data-testid="card"
+    >
       <Heading
-        type={HeadingType.H2}
-        data-testid="card-heading"
-        className={`mt-4 text-5xl ${
-          alignment === "left" ? "text-left" : "text-right"
-        }`}
+        variant={HeadingVariant.H2}
+        className={`mt-4 text-5xl text-${alignment}`}
       >
         {title}
       </Heading>
       <p
+        className={`mt-4 mb-4 text-lg font-text text-grau text-${alignment}`}
         data-testid="card-content"
-        className={`mt-4 mb-4 text-lg font-text text-grau ${
-          alignment === "left" ? "text-left" : "text-right"
-        }`}
       >
         {content}
       </p>
       <div className={alignment === "right" ? "flex justify-end" : ""}>
-        <Button data-testid="card-button" variant="secondary">
-          {buttonText}
-        </Button>
+        <Button variant="secondary">{buttonText}</Button>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 );
 
 export default Card;

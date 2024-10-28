@@ -2,6 +2,7 @@ import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
 import Button from "../components/button";
 import Card from "../components/card";
+import ExternalLink from "../components/external-link";
 
 const Home = () => {
   return (
@@ -36,32 +37,30 @@ const Home = () => {
           className="px-6"
         />
       </div>
-      <div className="relative flex justify-end -mt-[10%] sm:-mt-12">
+      <div className="relative flex justify-end -mt-[10%] sm:-mt-12 -z-10">
         <Image
           src="/images/coffee-beans.png"
           alt="Haufen von Kaffeebohnen"
           width={386}
           height={386}
           style={{ objectPosition: "144px 0px" }}
-          className="relative -z-10 bottom-6"
+          className="relative bottom-6"
         />
       </div>
       <div className="flex justify-center space-x-4 -mt-44">
-        <a href="tel:+4939812293575" className="flex">
+        <ExternalLink href="tel:+4939812293575" className="flex">
           <Button variant="primary" icon={Phone}>
             Anrufen
           </Button>
-        </a>
-        <a
+        </ExternalLink>
+        <ExternalLink
           href="https://www.google.de/maps/dir//Markt+15,+17235+Neustrelitz"
-          target="_blank"
-          rel="noreferrer"
           className="flex"
         >
           <Button variant="primary" icon={Map}>
             Route anzeigen
           </Button>
-        </a>
+        </ExternalLink>
       </div>
       <div className="flex justify-center mt-6">
         <p className="text-lg font-text text-grau">

@@ -1,10 +1,10 @@
-interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
+export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children: string;
-  type: HeadingType;
+  variant: HeadingVariant;
   className?: string;
 }
 
-export enum HeadingType {
+export enum HeadingVariant {
   H1,
   H2,
   H3,
@@ -12,40 +12,39 @@ export enum HeadingType {
 
 const Heading = ({
   children,
-  type,
+  variant,
   className,
-  ...props
 }: HeadingProps): JSX.Element => {
-  switch (type) {
-    case HeadingType.H1:
+  switch (variant) {
+    case HeadingVariant.H1:
       return (
         <h1
           className={`text-center text-5xl font-heading text-orange mb-8 ${className}`}
-          {...props} // Spread props here
+          data-testid="heading"
         >
           {children}
         </h1>
       );
-    case HeadingType.H2:
+    case HeadingVariant.H2:
       return (
         <h2
           className={`text-3xl font-heading text-orange mb-6 ${className}`}
-          {...props} // Spread props here
+          data-testid="heading"
         >
           {children}
         </h2>
       );
-    case HeadingType.H3:
+    case HeadingVariant.H3:
       return (
         <h3
           className={`text-center text-2xl font-heading text-orange mb-4 ${className}`}
-          {...props} // Spread props here
+          data-testid="heading"
         >
           {children}
         </h3>
       );
     default:
-      throw new Error(`Heading type ${type} is not implemented.`);
+      throw new Error(`Heading variant ${variant} is not implemented.`);
   }
 };
 

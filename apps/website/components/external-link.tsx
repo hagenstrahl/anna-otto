@@ -11,17 +11,14 @@ const ExternalLink = ({
 }: ExternalLinkProps): JSX.Element => {
   if (href.includes("mailto:") || href.includes("tel:")) {
     return (
-      <a
-        className={`text-orange hover:text-dark-orange ${className}`}
-        href={href}
-      >
+      <a className={` ${className}`} href={href}>
         {children}
       </a>
     );
   } else {
     return (
       <a
-        className={`text-orange hover:text-dark-orange ${className}`}
+        className={` ${className}`}
         href={href}
         target="_blank"
         rel="noreferrer"
