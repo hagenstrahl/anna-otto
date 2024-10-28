@@ -5,20 +5,20 @@ export interface ButtonProps
   children: string;
   className?: string;
   icon?: React.ElementType;
-  type: "primary" | "secondary";
+  variant: "primary" | "secondary"; // Renamed from "type" to "variant"
 }
 
 const Button = ({
   children,
   className = "",
   icon: Icon,
-  type,
+  variant, // Use "variant" here instead of "type"
   ...props
 }: ButtonProps): JSX.Element => {
   let typeClasses = "";
-  if (type === "primary") {
+  if (variant === "primary") {
     typeClasses = "text-white hover:bg-gruen bg-blau";
-  } else if (type === "secondary") {
+  } else if (variant === "secondary") {
     typeClasses =
       "text-blau border border-blau hover:text-gruen hover:border-gruen bg-white";
   }

@@ -34,7 +34,7 @@ const Card = ({ title, content, buttonText, alignment }: CardProps) => (
         {content}
       </p>
       <div className={alignment === "right" ? "flex justify-end" : ""}>
-        <Button data-testid="card-button" type="secondary">
+        <Button data-testid="card-button" variant="secondary">
           {buttonText}
         </Button>
       </div>

@@ -48,7 +48,7 @@ const Home = () => {
       </div>
       <div className="flex justify-center space-x-4 -mt-44">
         <a href="tel:+4939812293575" className="flex">
-          <Button type="primary" icon={Phone}>
+          <Button variant="primary" icon={Phone}>
             Anrufen
           </Button>
         </a>
@@ -58,7 +58,7 @@ const Home = () => {
           rel="noreferrer"
           className="flex"
         >
-          <Button type="primary" icon={Map}>
+          <Button variant="primary" icon={Map}>
             Route anzeigen
           </Button>
         </a>
