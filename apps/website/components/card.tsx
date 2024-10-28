@@ -1,21 +1,16 @@
 import Button from "./button";
 import Heading, { HeadingType } from "./heading";
 
-interface CardComponentProps {
+interface CardProps {
   title: string;
   content: string;
   buttonText: string;
   alignment: "left" | "right";
 }
 
-const CardComponent = ({
-  title,
-  content,
-  buttonText,
-  alignment,
-}: CardComponentProps) => (
+const Card = ({ title, content, buttonText, alignment }: CardProps) => (
   <section
-    data-testid="feature-section"
+    data-testid="card"
     className={`flex justify-center p-6 ml-8 bg-white rounded-xl w-80 ${
       alignment === "right" ? "ml-auto mr-10" : ""
     }`}
@@ -23,6 +18,7 @@ const CardComponent = ({
     <div>
       <Heading
         type={HeadingType.H2}
+        data-testid="card-heading"
         className={`mt-4 text-5xl ${
           alignment === "left" ? "text-left" : "text-right"
         }`}
@@ -30,7 +26,7 @@ const CardComponent = ({
         {title}
       </Heading>
       <p
-        data-testid="content"
+        data-testid="card-content"
         className={`mt-4 mb-4 text-lg font-text text-grau ${
           alignment === "left" ? "text-left" : "text-right"
         }`}
@@ -38,10 +34,12 @@ const CardComponent = ({
         {content}
       </p>
       <div className={alignment === "right" ? "flex justify-end" : ""}>
-        <Button type="secondary">{buttonText}</Button>
+        <Button data-testid="card-button" type="secondary">
+          {buttonText}
+        </Button>
       </div>
     </div>
   </section>
 );
 
-export default CardComponent;
+export default Card;

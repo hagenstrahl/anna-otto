@@ -1,4 +1,7 @@
-export interface ButtonProps {
+import React from "react";
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: string;
   className?: string;
   icon?: React.ElementType;
@@ -10,6 +13,7 @@ const Button = ({
   className = "",
   icon: Icon,
   type,
+  ...props
 }: ButtonProps): JSX.Element => {
   let typeClasses = "";
   if (type === "primary") {
@@ -18,10 +22,11 @@ const Button = ({
     typeClasses =
       "text-blau border border-blau hover:text-gruen hover:border-gruen bg-white";
   }
+
   return (
     <button
       className={`px-5 rounded-3xl font-text min-h-12 flex items-center ${typeClasses} ${className}`}
-      data-testid="button"
+      {...props} // Spread props here
     >
       {Icon && (
         <Icon

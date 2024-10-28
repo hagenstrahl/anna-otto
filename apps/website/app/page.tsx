@@ -1,7 +1,7 @@
 import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
 import Button from "../components/button";
-import FeatureSection from "../components/card-component";
+import Card from "../components/card";
 
 const Home = () => {
   return (
@@ -77,14 +77,13 @@ const Home = () => {
         />
       </div>
 
-      <div>
-        <FeatureSection
-          title="Das Café"
-          content="Duftender, selbst gebackener Kuchen oder ausgiebiges Faxen machen - genau das lässt unser Familiencafé zum Wohlfühlort werden."
-          buttonText="Coming Soon!"
-          alignment="left"
-        />
-      </div>
+      <Card
+        title="Das Café"
+        content="Duftender, selbst gebackener Kuchen oder ausgiebiges Faxen machen - genau das lässt unser Familiencafé zum Wohlfühlort werden."
+        buttonText="Coming Soon!"
+        alignment="left"
+      />
+
       <div className="flex justify-center -mt-56">
         <div className="relative w-[900px] h-[600px]">
           <Image
@@ -97,34 +96,29 @@ const Home = () => {
         </div>
       </div>
       <div className="flex justify-between">
-        <div>
-          <Image
-            src="/svg/birch-left.svg"
-            alt="Birkenstamm"
-            width={121}
-            height={473}
-            className="relative -top-56 -left-12 -z-20"
-          />
-        </div>
-        <div>
-          <Image
-            src="/svg/twig.svg"
-            alt="Ast mit grünen Blätter"
-            width={94}
-            height={69}
-            className="relative right-24 top-6"
-          />
-        </div>
+        <Image
+          src="/svg/birch-left.svg"
+          alt="Birkenstamm"
+          width={121}
+          height={473}
+          className="relative -top-56 -left-12 -z-20"
+        />
+        <Image
+          src="/svg/twig.svg"
+          alt="Ast mit grünen Blätter"
+          width={94}
+          height={69}
+          className="relative right-24 top-6"
+        />
       </div>
+
       <div className="relative -mt-96">
-        <div>
-          <FeatureSection
-            title=" Der Shop"
-            content="Holzspielzeug, Tragetuch oder Kuscheltier - hier gibt es immer etwas Neues zu entdecken."
-            buttonText="Coming Soon!"
-            alignment="right"
-          />
-        </div>
+        <Card
+          title=" Der Shop"
+          content="Holzspielzeug, Tragetuch oder Kuscheltier - hier gibt es immer etwas Neues zu entdecken."
+          buttonText="Coming Soon!"
+          alignment="right"
+        />
         <div className="relative justify-center">
           <div className="relative w-[561px] h-[600px]">
             <Image
@@ -139,34 +133,29 @@ const Home = () => {
       </div>
 
       <div className="flex justify-between -mt-40">
-        <div>
-          <Image
-            src="/images/rattle-toy.png"
-            alt="Holz Rassel"
-            width={168}
-            height={281}
-            className="relative rotate-[58deg] -left-7"
-          />
-        </div>
-        <div>
-          <Image
-            src="/svg/birch-right.svg"
-            alt="Birkenstamm"
-            width={121}
-            height={473}
-            className="relative -left-7 -top-8 -z-20"
-          />
-        </div>
+        <Image
+          src="/images/rattle-toy.png"
+          alt="Holz Rassel"
+          width={168}
+          height={281}
+          className="relative rotate-[58deg] -left-7"
+        />
+        <Image
+          src="/svg/birch-right.svg"
+          alt="Birkenstamm"
+          width={121}
+          height={473}
+          className="relative -left-7 -top-8 -z-20"
+        />
       </div>
+
       <div className="relative -mt-44">
-        <div>
-          <FeatureSection
-            title="Beratungen & Kurse"
-            content="Das neue Glück bringt viele Veränderungen mit sich. Lasst euch in unseren verschiedenen Kursen beraten."
-            buttonText="Coming Soon!"
-            alignment="left"
-          />
-        </div>
+        <Card
+          title="Beratungen & Kurse"
+          content="Das neue Glück bringt viele Veränderungen mit sich. Lasst euch in unseren verschiedenen Kursen beraten."
+          buttonText="Coming Soon!"
+          alignment="left"
+        />
         <div className="flex justify-center -mt-44">
           <div className="relative h-[600px] overflow-hidden">
             <Image
