@@ -1,4 +1,5 @@
 import React from "react";
+import { iconHeight } from "../libs/constants";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -29,8 +30,8 @@ const Button = ({
     >
       {Icon && (
         <Icon
-          height={24}
-          width={24}
+          height={iconHeight}
+          width={iconHeight}
           className="mr-2"
           data-testid="button-icon"
         />
