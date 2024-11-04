@@ -2,7 +2,9 @@ import { Map, Phone } from "iconoir-react";
 import Image from "next/image";
 import Button from "../components/button";
 import Card from "../components/card";
+import DesktopFooter from "../components/desktop-footer";
 import ExternalLink from "../components/external-link";
+import MobileStickyFooter from "../components/mobile-footer";
 
 const Home = () => {
   return (
@@ -168,6 +170,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <MobileStickyFooter />
+      <DesktopFooter />
     </div>
   );
 };
