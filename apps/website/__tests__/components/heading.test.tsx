@@ -62,9 +62,9 @@ describe("Heading Component", () => {
   test("should throw an error for unsupported variant", () => {
     expect(() =>
       createComponent({
-        variant: "bla" as unknown as HeadingVariant,
+        variant: "foo" as unknown as HeadingVariant,
         children: "Error Heading",
       })
-    ).toThrow("Heading variant bla is not implemented.");
+    ).toThrow("Heading variant foo is not implemented.");
   });
 });
