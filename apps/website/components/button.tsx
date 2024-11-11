@@ -1,10 +1,8 @@
-import React from "react";
 import { iconHeight } from "../libs/constants";
+import { ClassNameProps, getTestIdValue, TestIdProps } from "./utils";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ClassNameProps, TestIdProps {
   children: string;
-  className?: string;
   icon?: React.ElementType;
   variant: "primary" | "secondary";
 }
@@ -14,6 +12,7 @@ const Button = ({
   className = "",
   icon: Icon,
   variant,
+  testId,
 }: ButtonProps): JSX.Element => {
   let typeClasses = "";
   if (variant === "primary") {
@@ -26,14 +25,14 @@ const Button = ({
   return (
     <button
       className={`px-5 rounded-3xl font-text min-h-12 flex items-center ${typeClasses} ${className}`}
-      data-testid="button"
+      data-testid={getTestIdValue(testId, "button")}
     >
       {Icon && (
         <Icon
           height={iconHeight}
           width={iconHeight}
           className="mr-2"
-          data-testid="button-icon"
+          data-testid={getTestIdValue(testId, "button-icon")}
         />
       )}
       <span>{children}</span>

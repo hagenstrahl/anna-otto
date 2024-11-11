@@ -1,4 +1,4 @@
-export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
+export interface HeadingProps {
   children: string;
   variant: HeadingVariant;
   className?: string;
