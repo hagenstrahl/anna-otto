@@ -11,14 +11,11 @@ const navLinks = [
 const DesktopFooter = () => {
   return (
     <footer
-      className="hidden py-6 bg-white border-t border-gray-200 shadow-lg md:block"
+      className="hidden py-6 bg-white border-gray-200 shadow-lg md:block"
       data-testid="footer"
     >
       <div className="flex items-center max-w-screen-xl px-4 mx-auto justify-evenly">
-        <div
-          className="flex justify-center px-3 mt-6"
-          data-testid="footer-logo"
-        >
+        <div className="flex px-3" data-testid="footer-logo">
           <Image
             src="/fao-web-assets-logo-horizontal-gray.svg"
             alt="Anna und Otto - Das Familiencafe Logo"
