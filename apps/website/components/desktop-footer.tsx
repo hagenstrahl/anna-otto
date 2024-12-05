@@ -45,7 +45,7 @@ const DesktopFooter = () => {
         <div className="flex">
           <ExternalLink
             href="https://www.facebook.com/annaundotto/?locale=de_DE"
-            className="flex flex-col items-center p-3 text-grau"
+            className="flex justify-center p-3 text-grau"
             testId="facebook-link"
           >
             <Facebook className="w-6 h-6" />
@@ -53,7 +53,7 @@ const DesktopFooter = () => {
 
           <ExternalLink
             href="https://www.instagram.com/anna_und_otto/"
-            className="flex flex-col items-center p-3 text-grau"
+            className="flex justify-center p-3 text-grau"
             testId="instagram-link"
           >
             <Instagram className="w-6 h-6" />

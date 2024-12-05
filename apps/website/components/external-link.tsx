@@ -13,14 +13,14 @@ const ExternalLink = ({
 }: ExternalLinkProps): JSX.Element => {
   if (href.includes("mailto:") || href.includes("tel:")) {
     return (
-      <a className={` ${className}`} href={href} data-testid={testId}>
+      <a className={`${className}`} href={href} data-testid={testId}>
         {children}
       </a>
     );
   } else {
     return (
       <a
-        className={` ${className}`}
+        className={`${className}`}
         href={href}
         target="_blank"
         rel="noreferrer"
