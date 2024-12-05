@@ -24,11 +24,11 @@ const DesktopFooter = () => {
           />
         </div>
         <div className="flex space-x-8">
-          <span className="text-grau">Café</span>
+          <span className="p-3 text-grau">Café</span>
 
-          <span className="text-grau">Shop</span>
+          <span className="p-3 text-grau">Shop</span>
 
-          <span className="text-grau">Beratung</span>
+          <span className="p-3 text-grau">Beratung</span>
 
           {navLinks.map(({ label, href }) => (
             <Link
@@ -36,16 +36,16 @@ const DesktopFooter = () => {
               href={href}
               data-testid={`nav-link-${label.toLowerCase()}`}
             >
-              <span className="text-grau">{label}</span>
+              <span className="inline-block p-3 text-grau">{label}</span>
             </Link>
           ))}
 
-          <span className="text-grau">AGB</span>
+          <span className="inline-block p-3 text-grau">AGB</span>
         </div>
         <div className="flex">
           <ExternalLink
             href="https://www.facebook.com/annaundotto/?locale=de_DE"
-            className="flex flex-col items-center text-grau"
+            className="flex flex-col items-center p-3 text-grau"
             testId="facebook-link"
           >
             <Facebook className="w-6 h-6" />
@@ -53,7 +53,7 @@ const DesktopFooter = () => {
 
           <ExternalLink
             href="https://www.instagram.com/anna_und_otto/"
-            className="flex flex-col items-center text-grau"
+            className="flex flex-col items-center p-3 text-grau"
             testId="instagram-link"
           >
             <Instagram className="w-6 h-6" />
