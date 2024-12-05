@@ -5,7 +5,7 @@ import Heading, {
 } from "../../components/heading";
 
 type HeadingTestContext = {
-  heading: HTMLElement;
+  heading: () => HTMLElement;
 };
 
 describe("Heading Component", () => {
@@ -21,18 +21,18 @@ describe("Heading Component", () => {
       </Heading>
     );
     return {
-      heading: getByTestId("heading"),
+      heading: () => getByTestId("heading"),
     };
   };
   test("should render without crashing", () => {
     const { heading } = createComponent();
-    expect(heading).toBeTruthy();
+    expect(heading()).toBeTruthy();
   });
 
   test("should render H1 with correct classes", () => {
     const { heading } = createComponent();
-    expect(heading.tagName).toBe("H1");
-    expect(heading).toHaveClass(
+    expect(heading().tagName).toBe("H1");
+    expect(heading()).toHaveClass(
       "text-center text-5xl font-heading text-orange mb-8"
     );
   });
@@ -42,9 +42,9 @@ describe("Heading Component", () => {
       variant: HeadingVariant.H2,
       children: "H2 test",
     });
-    expect(heading.tagName).toBe("H2");
-    expect(heading).toHaveClass("text-3xl font-heading text-orange mb-6");
-    expect(heading).toHaveTextContent("H2 test");
+    expect(heading().tagName).toBe("H2");
+    expect(heading()).toHaveClass("text-3xl font-heading text-orange mb-6");
+    expect(heading()).toHaveTextContent("H2 test");
   });
 
   test("should render H3 with correct classes", () => {
@@ -52,11 +52,11 @@ describe("Heading Component", () => {
       variant: HeadingVariant.H3,
       children: "H3 test",
     });
-    expect(heading.tagName).toBe("H3");
-    expect(heading).toHaveClass(
+    expect(heading().tagName).toBe("H3");
+    expect(heading()).toHaveClass(
       "text-center text-2xl font-heading text-orange mb-4"
     );
-    expect(heading).toHaveTextContent("H3 test");
+    expect(heading()).toHaveTextContent("H3 test");
   });
 
   test("should throw an error for unsupported variant", () => {
