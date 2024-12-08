@@ -9,7 +9,7 @@ type CardTestContext = {
 };
 
 describe("Card Component", () => {
-  const createComponent = (props?: CardProps): CardTestContext => {
+  const createComponent = (props?: Partial<CardProps>): CardTestContext => {
     const propsWithDefaults: CardProps = {
       title: "Sample Title",
       content: "Sample Content",
@@ -19,15 +19,7 @@ describe("Card Component", () => {
       ...props,
     };
 
-    const { getByTestId } = render(
-      <Card
-        title={propsWithDefaults.title}
-        content={propsWithDefaults.content}
-        buttonText={propsWithDefaults.buttonText}
-        alignment={propsWithDefaults.alignment}
-        testId={propsWithDefaults.testId}
-      />
-    );
+    const { getByTestId } = render(<Card {...propsWithDefaults} />);
     return {
       section: () => getByTestId("card"),
       heading: () => getByTestId("heading"),

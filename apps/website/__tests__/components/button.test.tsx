@@ -8,23 +8,14 @@ type ButtonTestContext = {
 };
 
 describe("Button", () => {
-  const createComponent = (props?: ButtonProps): ButtonTestContext => {
+  const createComponent = (props?: Partial<ButtonProps>): ButtonTestContext => {
     const propsWithDefaults: ButtonProps = {
       variant: "primary",
       children: "test",
       testId: "test",
       ...props,
     };
-    const { getByTestId } = render(
-      <Button
-        variant={propsWithDefaults.variant}
-        icon={propsWithDefaults.icon}
-        className={propsWithDefaults.className}
-        testId={propsWithDefaults.testId}
-      >
-        {propsWithDefaults.children}
-      </Button>
-    );
+    const { getByTestId } = render(<Button {...propsWithDefaults} />);
     return {
       button: () => getByTestId("test-button"),
       buttonIcon: () =>

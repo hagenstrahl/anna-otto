@@ -36,7 +36,7 @@ const MobileStickyFooter = () => {
           <ExternalLink
             href="https://www.facebook.com/annaundotto/?locale=de_DE"
             className="flex items-center justify-center min-w-[48px] min-h-[48px] text-grau"
-            testId="facebook-link"
+            testId="facebook"
           >
             <Facebook className="w-6 h-6" />
           </ExternalLink>
@@ -44,7 +44,7 @@ const MobileStickyFooter = () => {
           <ExternalLink
             href="https://www.instagram.com/anna_und_otto/"
             className="flex items-center justify-center min-w-[48px] min-h-[48px] text-grau"
-            testId="instagram-link"
+            testId="instagram"
           >
             <Instagram className="w-6 h-6" />
           </ExternalLink>

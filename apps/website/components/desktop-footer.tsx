@@ -26,12 +26,6 @@ const DesktopFooter = () => {
           </Link>
         </div>
         <div className="flex space-x-8">
-          <span className="p-3 text-grau">Café</span>
-
-          <span className="p-3 text-grau">Shop</span>
-
-          <span className="p-3 text-grau">Beratung</span>
-
           {navLinks.map(({ label, href }) => (
             <Link
               key={href}
@@ -41,14 +35,12 @@ const DesktopFooter = () => {
               <span className="inline-block p-3 text-grau">{label}</span>
             </Link>
           ))}
-
-          <span className="inline-block p-3 text-grau">AGB</span>
         </div>
         <div className="flex">
           <ExternalLink
             href="https://www.facebook.com/annaundotto/?locale=de_DE"
             className="flex justify-center p-3 text-grau"
-            testId="facebook-link"
+            testId="facebook"
           >
             <Facebook className="w-6 h-6" />
           </ExternalLink>
@@ -56,7 +48,7 @@ const DesktopFooter = () => {
           <ExternalLink
             href="https://www.instagram.com/anna_und_otto/"
             className="flex justify-center p-3 text-grau"
-            testId="instagram-link"
+            testId="instagram"
           >
             <Instagram className="w-6 h-6" />
           </ExternalLink>

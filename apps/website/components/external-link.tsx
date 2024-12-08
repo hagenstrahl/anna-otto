@@ -1,8 +1,7 @@
-export interface ExternalLinkProps {
+import { ClassNameProps, getTestIdValue, TestIdProps } from "./utils";
+export interface ExternalLinkProps extends ClassNameProps, TestIdProps {
   href: string;
-  className?: string;
   children: JSX.Element[] | JSX.Element | string;
-  testId?: string;
 }
 
 const ExternalLink = ({
@@ -13,7 +12,11 @@ const ExternalLink = ({
 }: ExternalLinkProps): JSX.Element => {
   if (href.includes("mailto:") || href.includes("tel:")) {
     return (
-      <a className={`${className}`} href={href} data-testid={testId}>
+      <a
+        className={`${className}`}
+        href={href}
+        data-testid={getTestIdValue(testId, "link")}
+      >
         {children}
       </a>
     );
@@ -24,7 +27,7 @@ const ExternalLink = ({
         href={href}
         target="_blank"
         rel="noreferrer"
-        data-testid={testId}
+        data-testid={getTestIdValue(testId, "link")}
       >
         {children}
       </a>

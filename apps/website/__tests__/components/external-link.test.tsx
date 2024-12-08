@@ -9,23 +9,15 @@ type ExternalLinkTestContext = {
 
 describe("ExternalLink Component", () => {
   const createComponent = (
-    props?: ExternalLinkProps
+    props?: Partial<ExternalLinkProps>
   ): ExternalLinkTestContext => {
     const propsWithDefaults: ExternalLinkProps = {
       href: "https://test.com",
       children: "test",
-      testId: "test-link",
+      testId: "test",
       ...props,
     };
-    const { getByTestId } = render(
-      <ExternalLink
-        href={propsWithDefaults.href}
-        className={propsWithDefaults.className}
-        testId={propsWithDefaults.testId}
-      >
-        {propsWithDefaults.children}
-      </ExternalLink>
-    );
+    const { getByTestId } = render(<ExternalLink {...propsWithDefaults} />);
     return {
       link: () => getByTestId("test-link"),
     };
