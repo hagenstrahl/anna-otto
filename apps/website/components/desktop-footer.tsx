@@ -16,12 +16,14 @@ const DesktopFooter = () => {
     >
       <div className="flex items-center max-w-screen-xl px-4 mx-auto justify-evenly">
         <div className="flex px-3" data-testid="footer-logo">
-          <Image
-            src="/fao-web-assets-logo-horizontal-gray.svg"
-            alt="Anna und Otto - Das Familiencafe Logo"
-            width={195}
-            height={81}
-          />
+          <Link href="/">
+            <Image
+              src="/fao-web-assets-logo-horizontal-gray.svg"
+              alt="Anna und Otto - Das Familiencafe Logo"
+              width={195}
+              height={81}
+            />
+          </Link>
         </div>
         <div className="flex space-x-8">
           <span className="p-3 text-grau">Café</span>

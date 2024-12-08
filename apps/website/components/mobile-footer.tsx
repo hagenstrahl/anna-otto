@@ -11,7 +11,7 @@ const MobileStickyFooter = () => {
         <div className="flex items-center justify-around h-full">
           <a
             href="tel:+4939812293575"
-            className="flex flex-col items-center text-grau"
+            className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             data-testid="phone-link"
           >
             <Phone className="w-6 h-6" />
@@ -19,7 +19,7 @@ const MobileStickyFooter = () => {
 
           <a
             href="mailto:post@anna-otto.de"
-            className="flex flex-col items-center text-grau"
+            className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             data-testid="mail-link"
           >
             <Mail className="w-6 h-6" />
@@ -27,7 +27,7 @@ const MobileStickyFooter = () => {
 
           <a
             href="https://www.google.de/maps/dir//Markt+15,+17235+Neustrelitz"
-            className="flex flex-col items-center text-grau"
+            className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             data-testid="map-link"
           >
             <Map className="w-6 h-6" />
@@ -35,7 +35,7 @@ const MobileStickyFooter = () => {
 
           <ExternalLink
             href="https://www.facebook.com/annaundotto/?locale=de_DE"
-            className="flex flex-col items-center text-grau"
+            className="flex items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             testId="facebook-link"
           >
             <Facebook className="w-6 h-6" />
@@ -43,7 +43,7 @@ const MobileStickyFooter = () => {
 
           <ExternalLink
             href="https://www.instagram.com/anna_und_otto/"
-            className="flex flex-col items-center text-grau"
+            className="flex items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             testId="instagram-link"
           >
             <Instagram className="w-6 h-6" />
