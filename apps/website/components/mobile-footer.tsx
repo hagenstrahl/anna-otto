@@ -9,29 +9,29 @@ const MobileStickyFooter = () => {
     >
       <div className="h-full max-w-screen-xl px-4 mx-auto">
         <div className="flex items-center justify-around h-full">
-          <a
+          <ExternalLink
             href="tel:+4939812293575"
             className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
-            data-testid="phone-link"
+            testId="phone"
           >
             <Phone className="w-6 h-6" />
-          </a>
+          </ExternalLink>
 
-          <a
+          <ExternalLink
             href="mailto:post@anna-otto.de"
             className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
-            data-testid="mail-link"
+            testId="mail"
           >
             <Mail className="w-6 h-6" />
-          </a>
+          </ExternalLink>
 
-          <a
+          <ExternalLink
             href="https://www.google.de/maps/dir//Markt+15,+17235+Neustrelitz"
             className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
-            data-testid="map-link"
+            testId="map"
           >
             <Map className="w-6 h-6" />
-          </a>
+          </ExternalLink>
 
           <ExternalLink
             href="https://www.facebook.com/annaundotto/?locale=de_DE"

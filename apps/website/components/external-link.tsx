@@ -8,7 +8,7 @@ const ExternalLink = ({
   href,
   className = "",
   children,
-  testId = "heading",
+  testId,
 }: ExternalLinkProps): JSX.Element => {
   if (href.includes("mailto:") || href.includes("tel:")) {
     return (
