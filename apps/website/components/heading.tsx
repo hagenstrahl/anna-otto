@@ -1,4 +1,4 @@
-import { ClassNameProps, TestIdProps } from "./utils";
+import { ClassNameProps, getTestIdValue, TestIdProps } from "./utils";
 
 export interface HeadingProps extends ClassNameProps, TestIdProps {
   children: string;
@@ -15,14 +15,14 @@ const Heading = ({
   children,
   variant,
   className,
-  testId = "heading",
+  testId,
 }: HeadingProps): JSX.Element => {
   switch (variant) {
     case HeadingVariant.H1:
       return (
         <h1
           className={`text-center text-5xl font-heading text-orange mb-8 ${className}`}
-          data-testid={testId}
+          data-testid={getTestIdValue(testId, "test")}
         >
           {children}
         </h1>
@@ -31,7 +31,7 @@ const Heading = ({
       return (
         <h2
           className={`text-3xl font-heading text-orange mb-6 ${className}`}
-          data-testid={testId}
+          data-testid={getTestIdValue(testId, "test")}
         >
           {children}
         </h2>
@@ -40,7 +40,7 @@ const Heading = ({
       return (
         <h3
           className={`text-center text-2xl font-heading text-orange mb-4 ${className}`}
-          data-testid={testId}
+          data-testid={getTestIdValue(testId, "test")}
         >
           {children}
         </h3>

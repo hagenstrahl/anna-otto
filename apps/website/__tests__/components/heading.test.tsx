@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Heading, {
   HeadingProps,
   HeadingVariant,
@@ -13,15 +13,20 @@ describe("Heading Component", () => {
     props: HeadingProps = {
       variant: HeadingVariant.H1,
       children: "test",
+      testId: "heading",
     }
   ): HeadingTestContext => {
     const { getByTestId } = render(
-      <Heading variant={props.variant} className={props.className}>
+      <Heading
+        variant={props.variant}
+        className={props.className}
+        testId={props.testId}
+      >
         {props.children}
       </Heading>
     );
     return {
-      heading: () => getByTestId("heading"),
+      heading: () => getByTestId("heading-test"),
     };
   };
   test("should render without crashing", () => {
@@ -41,6 +46,7 @@ describe("Heading Component", () => {
     const { heading } = createComponent({
       variant: HeadingVariant.H2,
       children: "H2 test",
+      testId: "heading",
     });
     expect(heading().tagName).toBe("H2");
     expect(heading()).toHaveClass("text-3xl font-heading text-orange mb-6");
@@ -51,6 +57,7 @@ describe("Heading Component", () => {
     const { heading } = createComponent({
       variant: HeadingVariant.H3,
       children: "H3 test",
+      testId: "heading",
     });
     expect(heading().tagName).toBe("H3");
     expect(heading()).toHaveClass(
@@ -66,5 +73,10 @@ describe("Heading Component", () => {
         children: "Error Heading",
       })
     ).toThrow("Heading variant foo is not implemented.");
+  });
+  test("should not add data-testid attribute if not provided", () => {
+    render(<Heading variant={HeadingVariant.H1}>Test Heading</Heading>);
+    const headingElement = screen.getByText("Test Heading");
+    expect(headingElement).not.toHaveAttribute("data-testid");
   });
 });
