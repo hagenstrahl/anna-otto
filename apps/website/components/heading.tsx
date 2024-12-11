@@ -22,7 +22,7 @@ const Heading = ({
       return (
         <h1
           className={`text-center text-5xl font-heading text-orange mb-8 ${className}`}
-          data-testid={getTestIdValue(testId, "test")}
+          data-testid={getTestIdValue(testId, "heading")}
         >
           {children}
         </h1>
@@ -31,7 +31,7 @@ const Heading = ({
       return (
         <h2
           className={`text-3xl font-heading text-orange mb-6 ${className}`}
-          data-testid={getTestIdValue(testId, "test")}
+          data-testid={getTestIdValue(testId, "heading")}
         >
           {children}
         </h2>
@@ -40,7 +40,7 @@ const Heading = ({
       return (
         <h3
           className={`text-center text-2xl font-heading text-orange mb-4 ${className}`}
-          data-testid={getTestIdValue(testId, "test")}
+          data-testid={getTestIdValue(testId, "heading")}
         >
           {children}
         </h3>

@@ -10,23 +10,21 @@ type HeadingTestContext = {
 
 describe("Heading Component", () => {
   const createComponent = (
-    props: HeadingProps = {
+    props?: Partial<HeadingProps>
+  ): HeadingTestContext => {
+    const propsWithDefaults: HeadingProps = {
       variant: HeadingVariant.H1,
       children: "test",
-      testId: "heading",
-    }
-  ): HeadingTestContext => {
+      testId: "test",
+      ...props,
+    };
+
     const { getByTestId } = render(
-      <Heading
-        variant={props.variant}
-        className={props.className}
-        testId={props.testId}
-      >
-        {props.children}
-      </Heading>
+      <Heading {...propsWithDefaults}>{propsWithDefaults.children}</Heading>
     );
+
     return {
-      heading: () => getByTestId("heading-test"),
+      heading: () => getByTestId("test-heading"),
     };
   };
   test("should render without crashing", () => {
@@ -46,7 +44,7 @@ describe("Heading Component", () => {
     const { heading } = createComponent({
       variant: HeadingVariant.H2,
       children: "H2 test",
-      testId: "heading",
+      testId: "test",
     });
     expect(heading().tagName).toBe("H2");
     expect(heading()).toHaveClass("text-3xl font-heading text-orange mb-6");
@@ -57,7 +55,7 @@ describe("Heading Component", () => {
     const { heading } = createComponent({
       variant: HeadingVariant.H3,
       children: "H3 test",
-      testId: "heading",
+      testId: "test",
     });
     expect(heading().tagName).toBe("H3");
     expect(heading()).toHaveClass(

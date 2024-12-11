@@ -20,6 +20,7 @@ const Card = ({ title, content, buttonText, alignment, testId }: CardProps) => (
       <Heading
         variant={HeadingVariant.H2}
         className={`mt-4 text-5xl text-${alignment}`}
+        testId={testId}
       >
         {title}
       </Heading>

@@ -22,7 +22,7 @@ describe("Card Component", () => {
     const { getByTestId } = render(<Card {...propsWithDefaults} />);
     return {
       section: () => getByTestId("card"),
-      heading: () => getByTestId("heading"),
+      heading: () => getByTestId("test-heading"),
       content: () => getByTestId("card-content"),
       button: () => getByTestId("test-button"),
     };
