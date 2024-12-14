@@ -4,7 +4,7 @@ import ExternalLink from "./external-link";
 const MobileStickyFooter = () => {
   return (
     <footer
-      className="fixed bottom-0 left-0 right-0 h-20 bg-white border-gray-200 md:hidden"
+      className="fixed bottom-0 left-0 right-0 h-20 bg-white md:hidden"
       data-testid="footer"
     >
       <div className="h-full max-w-screen-xl px-4 mx-auto">
@@ -14,7 +14,7 @@ const MobileStickyFooter = () => {
             className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             testId="phone"
           >
-            <Phone className="w-6 h-6" />
+            <Phone />
           </ExternalLink>
 
           <ExternalLink
@@ -22,7 +22,7 @@ const MobileStickyFooter = () => {
             className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             testId="mail"
           >
-            <Mail className="w-6 h-6" />
+            <Mail />
           </ExternalLink>
 
           <ExternalLink
@@ -30,7 +30,7 @@ const MobileStickyFooter = () => {
             className="flex  items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             testId="map"
           >
-            <Map className="w-6 h-6" />
+            <Map />
           </ExternalLink>
 
           <ExternalLink
@@ -38,7 +38,7 @@ const MobileStickyFooter = () => {
             className="flex items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             testId="facebook"
           >
-            <Facebook className="w-6 h-6" />
+            <Facebook />
           </ExternalLink>
 
           <ExternalLink
@@ -46,7 +46,7 @@ const MobileStickyFooter = () => {
             className="flex items-center justify-center min-w-[48px] min-h-[48px] text-grau"
             testId="instagram"
           >
-            <Instagram className="w-6 h-6" />
+            <Instagram />
           </ExternalLink>
         </div>
       </div>

@@ -42,7 +42,7 @@ const DesktopFooter = () => {
             className="flex justify-center p-3 text-grau"
             testId="facebook"
           >
-            <Facebook className="w-6 h-6" />
+            <Facebook />
           </ExternalLink>
 
           <ExternalLink
@@ -50,7 +50,7 @@ const DesktopFooter = () => {
             className="flex justify-center p-3 text-grau"
             testId="instagram"
           >
-            <Instagram className="w-6 h-6" />
+            <Instagram />
           </ExternalLink>
         </div>
       </div>
