@@ -11,7 +11,7 @@ const navLinks = [
 const DesktopFooter = () => {
   return (
     <footer
-      className="hidden py-6 bg-white border-gray-200 shadow-lg md:block"
+      className="hidden py-6 bg-white shadow-lg md:block"
       data-testid="footer"
     >
       <div className="flex items-center max-w-screen-xl px-4 mx-auto justify-evenly">
