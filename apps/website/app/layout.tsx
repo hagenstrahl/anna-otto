@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import DesktopFooter from "../components/desktop-footer";
+import MobileStickyFooter from "../components/mobile-footer";
 import { getMetadata } from "../libs/metadata";
 import "./globals.scss";
 
@@ -11,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body>
+        {children}
+        <MobileStickyFooter />
+        <DesktopFooter />
+      </body>
     </html>
   );
 }

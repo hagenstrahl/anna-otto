@@ -1,14 +1,15 @@
 import Button from "./button";
 import Heading, { HeadingVariant } from "./heading";
+import { ClassNameProps, TestIdProps } from "./utils";
 
-interface CardProps {
+export interface CardProps extends ClassNameProps, TestIdProps {
   title: string;
   content: string;
   buttonText: string;
   alignment: "left" | "right";
 }
 
-const Card = ({ title, content, buttonText, alignment }: CardProps) => (
+const Card = ({ title, content, buttonText, alignment, testId }: CardProps) => (
   <div
     className={`px-8 flex justify-${alignment === "right" ? "end" : "start"}`}
   >
@@ -19,6 +20,7 @@ const Card = ({ title, content, buttonText, alignment }: CardProps) => (
       <Heading
         variant={HeadingVariant.H2}
         className={`mt-4 text-5xl text-${alignment}`}
+        testId={testId}
       >
         {title}
       </Heading>
@@ -29,7 +31,9 @@ const Card = ({ title, content, buttonText, alignment }: CardProps) => (
         {content}
       </p>
       <div className={alignment === "right" ? "flex justify-end" : ""}>
-        <Button variant="secondary">{buttonText}</Button>
+        <Button variant="secondary" testId={testId}>
+          {buttonText}
+        </Button>
       </div>
     </section>
   </div>
