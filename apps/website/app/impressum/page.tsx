@@ -22,7 +22,7 @@ const Impressum = (): JSX.Element => (
         <br />
         Markt 15 · 17235 Neustrelitz
       </p>
-      <p className="mt-4">Sandra Schultz</p>
+      <p className="mt-4">Silvia Herrmann</p>
       <p className="mt-4">
         Telefon:{" "}
         <ExternalLink href="tel:+4939812293575">+49 3981 2293575</ExternalLink>
@@ -35,7 +35,7 @@ const Impressum = (): JSX.Element => (
       <p className="mt-4">
         Steuernummer
         <br />
-        075/272/06264
+        075/230/06317
       </p>
     </section>
     <section className="max-w-3xl text-center">
