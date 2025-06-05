@@ -3,10 +3,8 @@ import Heading, { HeadingType } from "../../components/heading";
 import { Metadata } from "next";
 import { getMetadata } from "../../libs/metadata";
 
-export const metadata: Metadata = getMetadata({
-  title: "Impressum",
-});
-
+export const metadata: Metadata = getMetadata({ title: "Impressum" });
+//test
 const Impressum = (): JSX.Element => (
   <>
     <Heading type={HeadingType.H1} className="mt-8">
