@@ -29,37 +29,43 @@ export default function MobileMenu() {
       {isMenuOpen && (
         <div className="fixed inset-0 z-40 bg-white md:hidden">
           <div className="flex flex-col items-center justify-center h-full">
+            <img
+              src="/fao-web-assets-logo-vertical-colour.svg"
+              alt="Logo"
+              className="absolute"
+              style={{ width: "86.65px", height: "88.86px", top: "4rem" }}
+            />
             <nav className="flex flex-col space-y-8 text-center">
               <a
                 href="/"
-                className="text-2xl font-soleil text-grau"
+                className="text-2xl font-text text-grau"
                 onClick={closeMenu}
               >
                 Café
               </a>
               <a
                 href="/"
-                className="text-2xl font-soleil text-grau"
+                className="text-2xl font-text text-grau"
                 onClick={closeMenu}
               >
                 Shop
               </a>
               <a
                 href="/"
-                className="text-2xl font-soleil text-grau"
+                className="text-2xl font-text text-grau"
                 onClick={closeMenu}
               >
                 Beratung & Kurse
               </a>
               <a
                 href="/"
-                className="text-2xl font-soleil text-grau"
+                className="text-2xl font-text text-grau"
                 onClick={closeMenu}
               >
                 Kontakt
               </a>
             </nav>
-            <div className="flex items-center mt-12 space-x-4 text-lg text-grau font-soleil">
+            <div className="flex items-center mt-12 space-x-4 text-lg text-grau font-text">
               <a href="/impressum" onClick={closeMenu}>
                 Impressum
               </a>
