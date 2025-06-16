@@ -1,7 +1,7 @@
-import { Menu } from "iconoir-react";
 import { Metadata } from "next";
 import DesktopFooter from "../components/desktop-footer";
 import MobileStickyFooter from "../components/mobile-footer";
+import MobileMenu from "../components/mobile-menu";
 import { getMetadata } from "../libs/metadata";
 import "./globals.scss";
 
@@ -15,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
-        <button className="fixed top-[50px] right-8 w-10 h-10 flex item-center justify-center z-50">
-          <Menu className="w-6 h-6 text-orange" strokeWidth={3} />
-        </button>
+        <MobileMenu />
         {children}
         <MobileStickyFooter />
         <DesktopFooter />
