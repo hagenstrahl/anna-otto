@@ -15,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
-        <button className="fixed top-[50px] right-4 w-10 h-10 flex item-center justify-center z-50">
-          <Menu className="w-6 h-6 " />
+        <button className="fixed top-[50px] right-8 w-10 h-10 flex item-center justify-center z-50">
+          <Menu className="w-6 h-6 text-orange" strokeWidth={3} />
         </button>
         {children}
         <MobileStickyFooter />
