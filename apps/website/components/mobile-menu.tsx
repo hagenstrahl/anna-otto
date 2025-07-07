@@ -22,9 +22,17 @@ export default function MobileMenu() {
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
-          <Xmark className="w-10 h-10 text-orange" strokeWidth={2.5} />
+          <Xmark
+            data-testid="close-icon"
+            className="w-10 h-10 text-orange"
+            strokeWidth={2.5}
+          />
         ) : (
-          <Menu className="w-10 h-10 text-orange" strokeWidth={2.5} />
+          <Menu
+            data-testid="menu-icon"
+            className="w-10 h-10 text-orange"
+            strokeWidth={2.5}
+          />
         )}
       </button>
 
@@ -48,7 +56,10 @@ export default function MobileMenu() {
                 className="absolute"
                 style={{ width: "86.65px", height: "88.86px", top: "4rem" }}
               />
-              <nav className="flex flex-col space-y-8 text-center">
+              <nav
+                data-testid="mobile-menu-nav"
+                className="flex flex-col space-y-8 text-center"
+              >
                 <a
                   href="/"
                   className="text-3xl font-text text-grau"
