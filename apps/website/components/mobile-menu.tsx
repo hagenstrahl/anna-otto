@@ -2,6 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Xmark } from "iconoir-react";
 import { useState } from "react";
+import MobileStickyFooter from "./mobile-footer";
 
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +22,9 @@ export default function MobileMenu() {
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
-          <Xmark className="w-6 h-6 text-orange" strokeWidth={2.5} />
+          <Xmark className="w-10 h-10 text-orange" strokeWidth={2.5} />
         ) : (
-          <Menu className="w-6 h-6 text-orange" strokeWidth={2.5} />
+          <Menu className="w-10 h-10 text-orange" strokeWidth={2.5} />
         )}
       </button>
 
@@ -50,46 +51,57 @@ export default function MobileMenu() {
               <nav className="flex flex-col space-y-8 text-center">
                 <a
                   href="/"
-                  className="text-2xl font-text text-grau"
+                  className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Café
                 </a>
                 <a
                   href="/"
-                  className="text-2xl font-text text-grau"
+                  className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Shop
                 </a>
                 <a
                   href="/"
-                  className="text-2xl font-text text-grau"
+                  className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Beratung & Kurse
                 </a>
                 <a
                   href="/"
-                  className="text-2xl font-text text-grau"
+                  className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Kontakt
                 </a>
               </nav>
-              <div className="flex items-center mt-12 space-x-4 text-lg text-grau font-text">
-                <a href="/impressum" onClick={closeMenu}>
-                  Impressum
-                </a>
-                <span>|</span>
-                <a href="/datenschutz" onClick={closeMenu}>
-                  Datenschutz
-                </a>
-                <span>|</span>
-                <a href="/" onClick={closeMenu}>
-                  AGB
-                </a>
+
+              <div className="flex flex-col items-center mt-24 text-center">
+                <div className="flex items-center space-x-4 text-lg text-grau font-text">
+                  <a href="/impressum" onClick={closeMenu}>
+                    Impressum
+                  </a>
+                  <span>|</span>
+                  <a href="/datenschutz" onClick={closeMenu}>
+                    Datenschutz
+                  </a>
+                  <span>|</span>
+                  <a href="/" onClick={closeMenu}>
+                    AGB
+                  </a>
+                </div>
+
+                <div className="text-lg mt-9 text-grau font-text">—</div>
+
+                <div className="text-lg mt-9 text-grau font-text">
+                  täglich von 8:00-17:30 Uhr geöffnet
+                </div>
               </div>
+
+              <MobileStickyFooter />
             </div>
           </motion.div>
         )}
