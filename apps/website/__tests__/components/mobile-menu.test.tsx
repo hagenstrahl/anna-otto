@@ -1,26 +1,63 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import MobileMenu from "../../components/mobile-menu";
 
-type MenuTestContext = {
-  toggleButton: () => HTMLElement;
-  menuIcon: () => HTMLElement;
-  closeIcon: () => HTMLElement;
-  menuNav: () => HTMLElement;
+type MobileMenuTestContext = {
+  menuButton: () => HTMLElement;
+  getMenuIcon: () => HTMLElement | null;
+  getCloseIcon: () => HTMLElement | null;
+  getMobileNav: () => HTMLElement | null;
 };
 
 describe("MobileMenu Component", () => {
-  const createComponent = (): MenuTestContext => {
-    const { getByTestId } = render(<MobileMenu />);
+  const createComponent = (): MobileMenuTestContext => {
+    const { getByTestId, queryByTestId } = render(<MobileMenu />);
+
     return {
-      toggleButton: () => screen.getByRole("button"),
-      menuIcon: () => getByTestId("menu-icon"),
-      closeIcon: () => getByTestId("close-icon"),
-      menuNav: () => getByTestId("mobile-menu-nav"),
+      menuButton: () =>
+        getByTestId("menu-icon").closest("button") as HTMLElement,
+      getMenuIcon: () => queryByTestId("menu-icon"),
+      getCloseIcon: () => queryByTestId("close-icon"),
+      getMobileNav: () => queryByTestId("mobile-menu-nav"),
     };
   };
 
-  test("should render toggle button", () => {
-    const { toggleButton } = createComponent();
-    expect(toggleButton).toBeInTheDocument();
+  test("should render the menu button with menu icon initially", () => {
+    const { getMenuIcon, getCloseIcon, getMobileNav } = createComponent();
+
+    expect(getMenuIcon()).toBeInTheDocument();
+    expect(getCloseIcon()).not.toBeInTheDocument();
+    expect(getMobileNav()).not.toBeInTheDocument();
+  });
+
+  test("should open the menu and show close icon when clicked", async () => {
+    const { menuButton, getMenuIcon, getCloseIcon, getMobileNav } =
+      createComponent();
+
+    fireEvent.click(menuButton());
+
+    await waitFor(() => {
+      expect(getMenuIcon()).not.toBeInTheDocument();
+      expect(getCloseIcon()).toBeInTheDocument();
+      expect(getMobileNav()).toBeInTheDocument();
+    });
+  });
+
+  test("should close the menu when a nav link is clicked", async () => {
+    const { menuButton, getMobileNav } = createComponent();
+
+    fireEvent.click(menuButton());
+
+    await waitFor(() => {
+      expect(getMobileNav()).toBeInTheDocument();
+    });
+
+    const link = getMobileNav()?.querySelector("a");
+    expect(link).toBeTruthy();
+
+    fireEvent.click(link!);
+
+    await waitFor(() => {
+      expect(getMobileNav()).not.toBeInTheDocument();
+    });
   });
 });
