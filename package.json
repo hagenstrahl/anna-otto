@@ -22,7 +22,8 @@
     "concurrently": "^9.2.0"
   },
   "dependencies": {
-    "sanity": "^3.97.1"
+    "sanity": "^3.97.1",
+    "sass": "^1.89.2"
   },
   "packageManager": "npm@10.7.0"
 }
