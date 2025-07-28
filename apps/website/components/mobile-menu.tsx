@@ -53,36 +53,35 @@ export default function MobileMenu() {
               <img
                 src="/fao-web-assets-logo-vertical-colour.svg"
                 alt="Logo"
-                className="absolute"
-                style={{ width: "86.65px", height: "88.86px", top: "4rem" }}
+                className="absolute w-[86.65px] h-[88.86px] top-16"
               />
               <nav
                 data-testid="mobile-menu-nav"
                 className="flex flex-col space-y-8 text-center"
               >
                 <a
-                  href="/"
+                  href="/cafe"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Café
                 </a>
                 <a
-                  href="/"
+                  href="/shop"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Shop
                 </a>
                 <a
-                  href="/"
+                  href="/beratung-kurse"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Beratung & Kurse
                 </a>
                 <a
-                  href="/"
+                  href="/kontakt"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >

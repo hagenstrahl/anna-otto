@@ -54,10 +54,16 @@ describe("MobileMenu Component", () => {
     const link = getMobileNav()?.querySelector("a");
     expect(link).toBeTruthy();
 
-    fireEvent.click(link!);
+    if (link) {
+      fireEvent.click(link);
 
-    await waitFor(() => {
-      expect(getMobileNav()).not.toBeInTheDocument();
-    });
+      await waitFor(() => {
+        expect(getMobileNav()).not.toBeInTheDocument();
+      });
+    } else {
+      throw new Error(
+        "Expected navigation link to be present, but it was not found."
+      );
+    }
   });
 });
