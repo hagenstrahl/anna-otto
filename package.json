@@ -22,7 +22,6 @@
     "concurrently": "^9.2.0"
   },
   "dependencies": {
-    "framer-motion": "^12.23.11",
     "sanity": "^3.97.1",
     "sass": "^1.89.2"
   },

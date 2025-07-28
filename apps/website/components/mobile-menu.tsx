@@ -1,6 +1,8 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Xmark } from "iconoir-react";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import MobileStickyFooter from "./mobile-footer";
 
@@ -50,7 +52,7 @@ export default function MobileMenu() {
             className="fixed inset-0 z-40 bg-white md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full">
-              <img
+              <Image
                 src="/fao-web-assets-logo-vertical-colour.svg"
                 alt="Logo"
                 className="absolute w-[86.65px] h-[88.86px] top-16"
@@ -59,49 +61,49 @@ export default function MobileMenu() {
                 data-testid="mobile-menu-nav"
                 className="flex flex-col space-y-8 text-center"
               >
-                <a
+                <Link
                   href="/cafe"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Café
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/shop"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Shop
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/beratung-kurse"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Beratung & Kurse
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/kontakt"
                   className="text-3xl font-text text-grau"
                   onClick={closeMenu}
                 >
                   Kontakt
-                </a>
+                </Link>
               </nav>
 
               <div className="flex flex-col items-center mt-24 text-center">
                 <div className="flex items-center space-x-4 text-lg text-grau font-text">
-                  <a href="/impressum" onClick={closeMenu}>
+                  <Link href="/impressum" onClick={closeMenu}>
                     Impressum
-                  </a>
+                  </Link>
                   <span>|</span>
-                  <a href="/datenschutz" onClick={closeMenu}>
+                  <Link href="/datenschutz" onClick={closeMenu}>
                     Datenschutz
-                  </a>
+                  </Link>
                   <span>|</span>
-                  <a href="/" onClick={closeMenu}>
+                  <Link href="/" onClick={closeMenu}>
                     AGB
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="text-lg mt-9 text-grau font-text">—</div>

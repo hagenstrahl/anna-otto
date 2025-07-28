@@ -1,6 +1,30 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import MobileMenu from "../../components/mobile-menu";
 
+jest.mock("next/link", () => ({
+  __esModule: true,
+  default: ({
+    children,
+    href,
+    ...props
+  }: {
+    children: React.ReactNode;
+    href: string;
+    [key: string]: any; // for any other props
+  }) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
+  ),
+}));
+
+jest.mock("framer-motion", () => ({
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
+  motion: {
+    div: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  },
+}));
+
 type MobileMenuTestContext = {
   menuButton: () => HTMLElement;
   getMenuIcon: () => HTMLElement | null;
@@ -11,7 +35,6 @@ type MobileMenuTestContext = {
 describe("MobileMenu Component", () => {
   const createComponent = (): MobileMenuTestContext => {
     const { getByTestId, queryByTestId } = render(<MobileMenu />);
-
     return {
       menuButton: () =>
         getByTestId("menu-icon").closest("button") as HTMLElement,
@@ -36,9 +59,9 @@ describe("MobileMenu Component", () => {
     fireEvent.click(menuButton());
 
     await waitFor(() => {
-      expect(getMenuIcon()).not.toBeInTheDocument();
-      expect(getCloseIcon()).toBeInTheDocument();
       expect(getMobileNav()).toBeInTheDocument();
+      expect(getCloseIcon()).toBeInTheDocument();
+      expect(getMenuIcon()).not.toBeInTheDocument();
     });
   });
 
@@ -56,7 +79,6 @@ describe("MobileMenu Component", () => {
 
     if (link) {
       fireEvent.click(link);
-
       await waitFor(() => {
         expect(getMobileNav()).not.toBeInTheDocument();
       });
