@@ -1,7 +1,7 @@
 import { ClassNameProps, getTestIdValue, TestIdProps } from "./utils";
 export interface ExternalLinkProps extends ClassNameProps, TestIdProps {
   href: string;
-  children: JSX.Element[] | JSX.Element | string;
+  children: React.ReactElement[] | React.ReactElement | string;
 }
 
 const ExternalLink = ({
@@ -9,7 +9,7 @@ const ExternalLink = ({
   className = "",
   children,
   testId,
-}: ExternalLinkProps): JSX.Element => {
+}: ExternalLinkProps): React.ReactElement => {
   if (href.includes("mailto:") || href.includes("tel:")) {
     return (
       <a

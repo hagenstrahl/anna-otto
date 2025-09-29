@@ -13,7 +13,7 @@ const Button = ({
   icon: Icon,
   variant,
   testId,
-}: ButtonProps): JSX.Element => {
+}: ButtonProps): React.ReactElement => {
   let typeClasses = "";
   if (variant === "primary") {
     typeClasses = "text-white hover:bg-gruen bg-blau";

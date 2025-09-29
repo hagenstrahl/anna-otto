@@ -75,4 +75,8 @@ describe("ExternalLink Component", () => {
     );
     expect(container.querySelector("a")).not.toHaveAttribute("data-testid");
   });
+  test("should render with default className when none provided", () => {
+    const { link } = createComponent({ className: undefined });
+    expect(link().className).toBe(""); // default is ""
+  });
 });

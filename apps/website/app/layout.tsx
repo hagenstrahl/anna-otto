@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import DesktopFooter from "../components/desktop-footer";
 import MobileStickyFooter from "../components/mobile-footer";
+import MobileMenu from "../components/mobile-menu";
 import { getMetadata } from "../libs/metadata";
 import "./globals.scss";
 
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
+        <MobileMenu />
         {children}
         <MobileStickyFooter />
         <DesktopFooter />

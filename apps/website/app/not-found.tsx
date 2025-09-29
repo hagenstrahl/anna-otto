@@ -4,7 +4,7 @@ import Heading, { HeadingVariant } from "../components/heading";
 export const metadata: Metadata = {
   title: "Hoppla! - ANNA & OTTO - Das Familiencafé",
 };
-const Custom404 = (): JSX.Element => (
+const Custom404 = (): React.ReactElement => (
   <>
     <Heading variant={HeadingVariant.H1} className="mt-8">
       Hoppla!

@@ -19,10 +19,11 @@
     "apps/*"
   ],
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^9.2.0"
   },
   "dependencies": {
-    "sanity": "^3.52.2"
+    "sanity": "^3.97.1",
+    "sass": "^1.89.2"
   },
   "packageManager": "npm@10.7.0"
 }

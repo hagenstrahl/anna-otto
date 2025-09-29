@@ -16,7 +16,7 @@ const Heading = ({
   variant,
   className,
   testId,
-}: HeadingProps): JSX.Element => {
+}: HeadingProps): React.ReactElement => {
   switch (variant) {
     case HeadingVariant.H1:
       return (
